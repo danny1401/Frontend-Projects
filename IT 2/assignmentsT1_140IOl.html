@@ -1,0 +1,183 @@
+<html>
+<head>
+	<meta charset="UTF-8">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=1366, initial-scale=1">
+	<link rel="stylesheet" href="./navbar.css">
+	<link rel="stylesheet" href="./style1.css">
+	<link rel="stylesheet" href="./style2.css">
+	<link rel="stylesheet" href="./scrollbar.css">
+	<title>Danny</title>
+
+<link rel="icon" href="./ESharingan_S.ico" type="image/x-icon">
+<style>
+body {background-image: url(./binarycodes.gif);}
+
+#boks {
+	position: relative;
+	top: -53px;
+	width: 1100px;
+	height: 400px;
+}
+.button {
+    position: relative;
+	width: 210px;
+    padding: 26px 20px;
+    margin: 20px 15px;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+	border-radius: 10px;
+    font-size: 22px;
+	font-family: Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    overflow: hidden;
+	outline: none;
+}
+.button span {
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.button:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -14px;
+    width: 235px;
+	padding: 29px 0px;
+	background-color: #19b396;
+	border: 2px solid white;
+	border-radius: 10px;
+	font-size: 20px;
+	font-family: Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+	
+    opacity: 0;
+    -webkit-transition: .4s,opacity .6s;
+    -moz-transition: .4s,opacity .6s;
+    -o-transition: .4s,opacity .6s;
+    transition: .4s,opacity .6s;
+}
+.button:before {
+    content: attr(data-hover);
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+}
+.button:hover span {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3);
+}
+.button:hover:before {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+#not_done { 
+	cursor: not-allowed;
+}
+</style>
+</head>
+<body>
+<div class="fixed" id="bar">
+	<h1 id="logotitle">DANNY THINH TRAN</h1>
+	<div class="buttons">
+		<a href="./index.php" class="meny"><span>Home</span></a>
+		<a href="./Terminer_140IOl.html" class="meny"><span>Terminer</span></a>
+		<a href="./assignmentsT1_140IOl.html" class="meny" id="maincolor"><span>Oppgaver-T1</span></a>
+		<a href="./Prover_140IOl.html" class="meny"><span>Prøver</span></a>
+	</div>
+</div>
+
+<center><br>
+<h1 id="titleO">OPPGAVER</h1><br><br><br>
+<h3 id="titleT">Termin 1</h3>
+<br><br><br>
+
+<div id="boks">
+	<a href="./Oppgaver/3 - Stemmer & SVG/Stemmer.html">
+	<button class="button" type="button" data-hover="Tabell om stemmer">
+		<span>Oppgave 3A</span></button></a>
+		<a href="./Oppgaver/3 - Stemmer & SVG/SVG.html">
+	<button class="button" type="button" data-hover="HTML SVG">
+		<span>Oppgave 3B</span></button></a>
+
+		<a href="./Oppgaver/4 - Halloween og Kommunevalg/Halloween_Invitasjon.html">
+	<button class="button" type="button" data-hover="Halloween">
+		<span>Oppgave 4A</span></button></a>
+		<a href="./Oppgaver/4 - Halloween og Kommunevalg/Kommunevalg.html">
+	<button class="button" type="button" data-hover="Kommunevalg">
+		<span>Oppgave 4B</span></button></a>
+
+	<a href="./Oppgaver/5 - JavaScript Start/Knop-til-Kilometer.html">
+	<button class="button" type="button" data-hover="Knop til Kilometer">
+		<span>Oppgave 5AB</span></button></a>
+		<a href="./Oppgaver/5 - JavaScript Start/Matsalg.html">
+	<button class="button" type="button" data-hover="Matsalg">
+		<span>Oppgave 5CD</span></button></a>
+
+		<a href="./Oppgaver/6 - Elektrisk Sparkesykkel/index_ELSS.html">
+	<button class="button" type="button" data-hover="EL Sparkesykkel">
+		<span>Oppgave 6</span></button></a>
+		
+		<a href="./Oppgaver/7 - LocalStorage & SessionsStorage/LocalStorage.php">
+	<button class="button" type="button" data-hover="Local Storage">
+		<span>Oppgave 7A</span></button></a>
+		<a href="./Oppgaver/7 - LocalStorage & SessionsStorage/SessionStorage.html">
+	<button class="button" type="button" data-hover="Session Storage">
+		<span>Oppgave 7B</span></button></a>
+
+		<a href="Oppgaver/8 - Dynamisk Webside/Dynamisk_Webside.php">
+	<button class="button" type="button" data-hover="Dynamisk Webside">
+		<span>Oppgave 8A</span></button></a>
+		<a href="Oppgaver/8 - Dynamisk Webside/8B - Refleksjon av Oppgave 8A.pdf">
+	<button class="button" type="button" data-hover="Refleksjon">
+		<span>Oppgave 8B</span></button></a>
+
+		<a href="Oppgaver/9 - Interaktivitet (Juletre)/Juletre.html">
+	<button class="button" type="button" data-hover="Juletre">
+		<span>Oppgave 9</span></button></a>
+
+		<a href="Oppgaver/10 - Stolpediagram/passasjertall_flyplass.html">
+	<button class="button" type="button" data-hover="Stolpediagram">
+		<span>Oppgave 10</span></button></a>
+
+		<a href="Oppgaver/13 - Kubens avdelinger/home.html">
+	<button class="button" type="button" data-hover="Kubens avdelinger">
+		<span>Oppgave 13</span></button></a>
+
+		<a href="Oppgaver/14 - Quiz i JavaScript/Quiz.html">
+	<button class="button" type="button" data-hover="Quiz" id="not_done">
+		<span>Oppgave 14</span></button></a>
+
+		<a href="Oppgaver/16 - Videoredigering/#.mp4">
+	<button class="button" type="button" data-hover="Videoredigering" id="not_done">
+		<span>Oppgave 16</span></button></a>	
+</div>
+<div style="position:absolute; top:740px; opacity: 0;">test</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=1366, initial-scale=1">
+	<link rel="stylesheet" href="./navbar.css">
+	<link rel="stylesheet" href="./style1.css">
+	<link rel="stylesheet" href="./style2.css">
+	<title>Danny</title>
+
+<link rel="icon" href="./MSharingan_O.ico" type="image/x-icon">
+<style>
+body {background-image: url(./view.png);}
+
+#boks {
+	position: relative;
+	top: -5px;
+	width: 1200px;
+	margin-bottom: 50px;
+}
+.button {
+    position: relative;
+	top: -15px;
+	width: 280px;
+    padding: 22px 20px;
+    margin: 5px 15px;
+    color: black;
+    background-color: #E8E8E8;
+    border: 2px solid black;
+	border-radius: 10px;
+    font-size: 22px;
+	font-family: Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-weight: bold;
+	text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    overflow: hidden;
+	outline: none;
+}
+.button span {
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.button:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -14px;
+    width: 303px;
+	padding: 24px 0px;
+	background-color: #4de6c9;
+	border: 2px solid black;
+	border-radius: 10px;
+	font-size: 22px;
+	font-family: Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+	
+    opacity: 0;
+    -webkit-transition: .4s,opacity .6s;
+    -moz-transition: .4s,opacity .6s;
+    -o-transition: .4s,opacity .6s;
+    transition: .4s,opacity .6s;
+}
+.button:before {
+    content: attr(data-hover);
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+}
+.button:hover span {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3);
+}
+.button:hover:before {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+</style>
+</head>
+<body>
+<div class="fixed" id="bar">
+	<h1 id="logotitle">DANNY THINH TRAN</h1>
+	<div class="buttons">
+		<a href="./index.php" class="meny"><span>Home</span></a>
+		<a href="./Terminer_140IOl.html" class="meny"><span>Terminer</span></a>
+		<a href="./assignmentsT1_140IOl.html" class="meny"><span>Termin 1</span></a>
+		<a href="./assignmentsT2_140IOl.html" class="meny"><span>Termin 2</span></a>
+		<a href="./Prover_140IOl.html" class="meny" id="maincolor"><span>Prøver</span></a>
+	</div>
+</div>
+
+<center><br>
+<h1 id="titleP_O">PRØVER</h1><br><br><br><br>
+<!--------------------------------------------------------------------------->
+<h3 id="titleP_T">Termin 1</h3>
+<br><br>
+
+<div id="boks">
+	<a href="./Prøver/Prove_2019-09-23_Ferjefarten/index.html">
+	<button class="button" type="button" data-hover="Ferjefarten Kubenvika">
+		<span>Prøve 03.09.19</span></button></a>
+		
+	<a href="./Prøver/Prove_2019-11-04_Betongberegning/index.html">
+	<button class="button" type="button" data-hover="Betongberegning">
+		<span>Prøve 04.11.19</span></button></a>
+
+		<a href="./Prøver/Prove_2019-12-09_Oppvarming/index.html">
+	<button class="button" type="button" data-hover="Oppvarming">
+		<span>Prøve 09.12.19</span></button></a>
+<!--------------------------------------------------------------------------->
+<br>
+<h3 id="titleP_T">Termin 2</h3>
+<br><br>
+	<a href="./Prøver/Prove_2020-01-20_Populasjon/index.html">
+	<button class="button" type="button" data-hover="Populasjon">
+		<span>Prøve 20.01.20</span></button></a>
+		
+	<a href="./Prøver/Prove_2020-03-02_Elgen/index.html">
+	<button class="button" type="button" data-hover="Elgen">
+		<span>Prøve 02.03.20</span></button></a>
+
+		<a href="./Prøver/Tentamen_2020-04-28_Tema/index.html">
+	<button class="button" type="button" data-hover="Tentamen" id="not_done">
+		<span>Tentamen 14.05.20</span></button></a>
+</div>
+</center>
+</body>
+</html>
