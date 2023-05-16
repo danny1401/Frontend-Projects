@@ -139,10 +139,10 @@ $valg = '
 <div id="admin">
 <form action="" method="post" name="test">
 <h3 style="margin-top:30px;">Brukernavn</h3>
-<input type="brukernavn" name="brukernavn" autocomplete="off" value="" id="felt"> 
+<input type="brukernavn" value="admin" name="brukernavn" autocomplete="off" value="" id="felt"> 
 <br><br>
 <h3>Passord</h3>
-<input type="password" name="passordet" autocomplete="off" value="" id="felt"> 
+<input type="password" value="admin" name="passordet" autocomplete="off" value="" id="felt"> 
 </div>
 
 <input type="reset" name="Reset" value="Reset" class="knapp" id="knapp1">
@@ -157,10 +157,8 @@ $valg = '
 
 $innskrevet_bruker = "";
 $innskrevet_pw = "";
-$riktig_bruker1 = "tran";
-$riktig_pw1 = "tran";
-$riktig_bruker2 = "chopsticks";
-$riktig_pw2 = "chopsticks";
+$riktig_bruker1 = "admin";
+$riktig_pw1 = "admin";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $valg = "";
