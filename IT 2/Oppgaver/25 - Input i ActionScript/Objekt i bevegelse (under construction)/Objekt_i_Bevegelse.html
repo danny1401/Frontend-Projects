@@ -1,0 +1,105 @@
+<html>
+<head>
+	<meta charset="UTF-8">	
+	<title>Objekt i Bevegelse</title>
+
+<style>
+body {
+	font-family: HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+#knapp {
+	position: relative;
+	top: 25px;
+	width: 220px;
+	height: 60px;
+	background-color: #f0f0f0;
+	border: 2px solid black;
+	border-radius: 8px;
+	font-size: 25px;
+	margin: 0 18px; 
+	text-align: center;
+}
+#BackButton {
+	position: absolute;
+	top: 30px;
+	left: 32px;
+	height: 68px; 
+	width: 70px;
+	z-index: 2;
+}
+</style>
+<script>
+function eksempel(skjema) {
+
+var nummer1 = skjema.nummer1.value;
+var nummer2 = skjema.nummer2.value;
+var valg = skjema.valg.value;
+
+if (type == 1) { var objekt = 'Sirkel'; }
+if (type == 2) { var objekt = 'Rektangel'; }
+
+if (farge == 1) { var color = 'Rød'; }
+if (farge == 2) { var color = 'Blå'; }
+if (farge == 3) { var color = 'Gul'; }
+if (farge == 4) { var color = 'Grønn'; }
+
+if (retning == 1) { var vei = 'Rød'; }
+if (retning == 2) { var vei = 'Blå'; }
+if (retning == 3) { var vei = 'Gul'; }
+if (retning == 4) { var vei = 'Grønn'; }
+
+var test1 = nummer1;
+var test2 = nummer2;
+var test3 = tegn;
+var test4 = sum;
+
+document.write ('<object width="100%" height="100%" data="./Kalkulator.swf?test1='+test1+'&test2='+test2+'&test3='+test3+'&test4='+test4+'"></object>');
+
+}
+</script>
+</head>
+<body>
+<center>
+<a href="./../../assignmentsT2_140IOl.html"><img src="./../backbuttonB.png" id="BackButton"></img></a>
+
+<div id="boks">
+<h1 id="title">Objekt i bevegelse</h1>
+
+<form name="skjema">
+	Hvilken type objekt?
+	<select name="type">
+        <option value="1">Sirkel</option>
+        <option value="2">Rektangel</option>
+    </select>
+<p>
+	Hvor stor er objektet?
+	<input type="number" name="radius" id="input" placeholder="pixels">
+	<input type="number" name="lengde" id="input" placeholder="pixels">
+	<input type="number" name="bredde" id="input" placeholder="pixels">
+<p>
+	Hvilken farge skal objektet ha?
+	<select name="farge">
+        <option value="1">Rød</option>
+        <option value="2">Blå</option>
+        <option value="3">Gul</option>
+        <option value="4">Grønn</option>
+    </select>
+<p>
+	Hvilken retning skal objektet bevege seg i?
+	<select name="farge">
+        <option value="1">Horisontalt</option>
+        <option value="2">Vertikalt</option>
+        <option value="3">Diagonalt</option>
+    </select>
+<p>	
+	I hvilke hastighet skal objektet bevege seg i?
+	<input type="number" name="hastighet" id="input" placeholder="pixels">
+<p>
+	<input id="knapp" type="button" value="Send inn svar" onClick="eksempel(skjema)">
+	<input id="knapp" type="reset" value="Nullstill">
+</form>
+</div>
+
+</center>
+</body>
+</html>
