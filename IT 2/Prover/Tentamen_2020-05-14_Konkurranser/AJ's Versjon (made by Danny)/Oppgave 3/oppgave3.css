@@ -1,0 +1,165 @@
+body{
+	background-image: url(./../WPP2.jpg);
+	background-size: 100%;
+	font-family: 'Balsamiq Sans', cursive;
+	overflow: hidden;
+}
+#title {
+	position: relative;
+	top: 45px;	
+	width: 750px;
+	padding: 15px 20px;
+	border: 2px solid black;
+	background-color: whitesmoke;
+	font-size: 45px;
+}
+#title:hover { background: #E8E8E8; }
+
+#boks {
+	position: relative;
+	top: 9px;
+	width: 750px;
+	height: 410px;
+	padding: 10px 20px;
+	border: 2px solid black;
+	background-color: white;
+	font-size: 22px;
+	text-align: center;
+}
+select, option {
+	padding: 5px 22px;
+	padding-left: 30px;
+	border: 1px solid black;
+	background-color: whitesmoke;
+	font-size: 21px;
+	outline: none;
+	margin-left: 20px;
+}
+.input {
+	width: 185px;
+	padding: 5px 2px;
+	border: 1px solid black;
+	background-color: whitesmoke;
+	font-size: 21px;
+	text-align: center;
+	margin-left: 20px;
+	outline: none;
+}
+#button {
+	position: relative;
+	top: 45px;
+	width: 230px;
+	padding: 13px 0px;
+	border: 2px solid black;
+	background: whitesmoke;
+	font-size: 21px;
+	font-weight: bold;
+	outline: none;
+}
+#button:hover { background: lightgrey; }
+#button:active { background: whitesmoke; }
+
+#start {
+	position: relative;
+	top: 41px;
+	margin-bottom: 900px;
+}
+#arrow {
+	position: absolute;
+	top: 9.5%;
+	left: 5%;
+}
+
+/*-----------------------------------VITHU--------------------------------------*/
+#test {
+	position:relative;
+	left:300;
+}
+.start2 {
+	position:relative;
+	width: 60px;
+	left: 410px;
+	top: -230px;
+	z-index: 2;
+	cursor:pointer;
+}
+#sp2 {
+	position:relative;
+	display:none;
+}
+#sp3 {
+	position:relative;
+	display:none;
+}
+#result {
+	position:relative;
+	display:none;
+}
+.hjul {
+	width: 200;
+	height: 200;
+}
+.button {
+	display: block;
+	width: 250px;
+	margin: 40px auto;
+	cursor: pointer;
+}
+.button:hover {
+	opacity: 0.8;
+}
+.blur {
+	animation: blur 10s;
+}
+@keyframes blur {
+  0% {
+    filter: blur(1.5px);
+  }
+  80% {
+    filter: blur(1.5px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+#bakk {
+	position:absolute;
+	width:750;
+	height:411;
+	top:115;
+	left:300;
+	z-index:-10;
+}
+#test1 {
+	position: relative;
+	top:-260;
+	animation-timing-function: linear;
+}
+#test2 {
+	position: relative;
+	top:-720;
+	animation-timing-function: linear;
+	z-index:-3;
+}
+
+#svard1 {
+	position:relative;
+	display:none;
+}
+#svard2 {
+	position:relative;
+	display:none;
+}
+#svard3 {
+	position:relative;
+	display:none;
+}
+
+@keyframes test1 {
+  from {left: 0px;}
+  to {left: -300px;}
+}
+@keyframes test2 {
+  from {left: 0px;}
+  to {left: 300px;}
+}

@@ -1,0 +1,51 @@
+<html>
+<head>   
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=1366, initial-scale=1">
+    <title>Eksamen 2017</title>       
+	
+<style>    
+body {
+	background-image: url(./landscape1.jpg);
+	background-size: cover;
+	overflow: hidden;
+}
+.propellen {
+    position: absolute;
+    top: 200px;
+    right: 315px;
+    height: 160px;
+    width: 160px;
+    margin: 0px 0px 0px 0px;   
+}
+	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+	@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+</style>
+
+<script>
+function oppdatereRotor() {
+	var vindVerdi = document.getElementById("vindHastighet").value;
+	
+	var random = vindVerdi * (Math.random() * 100);
+	
+	document.getElementById("rotor").innerHTML = '<img class="propellen" src="./Vedlegg-INF2-V2020/lykkehjul.png" alt="" width="360" height="360" style="-webkit-animation:spin '+vindVerdi+'s linear infinite; -moz-animation:spin '+vindVerdi+'s linear infinite; animation:spin '+vindVerdi+'s linear infinite;">';
+}
+</script>
+</head>
+<body onload="oppdatereRotor()">
+
+<div id="stolpe"></div>
+
+<div id="startTekst">
+	<select id="vindHastighet" onchange="oppdatereRotor()">
+		<option value="1">Giraffe</option>
+		<option value="2">Tiger</option>
+		<option value="3">Ape</option>
+		<option value="4">Elefant</option>
+	</select>
+</div>
+<div id="rotor"></div>
+</body>
+</html>

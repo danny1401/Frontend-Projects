@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./oppgave2.css">
+<link href="dos.png" rel="icon" type="image/x-icon" />
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+<title>Oppgave 2</title>
+
+<script>
+function start(skjema) {
+var valg = document.getElementById("valg").value;
+
+	if (valg === "Velg Dyr") {
+		alert("Vennligst velg et dyr for å gjette!");
+	}
+	else {
+		localStorage.setItem(1, valg);
+		localStorage.getItem(1);
+		document.getElementById("lykkehjul").style.display ="block";
+	}
+}
+</script>
+</head>
+<body>
+<center>
+<form name="skjema">
+	<div id="test">
+		<div id="boks">
+			<center><h1>Lykkehjul</h1></center>
+			Her kan du delta i et lykkehjul der målet med denne<br>konkurransen er å gjette fram til det riktige dyret.<p>Vennligst velg et dyr før du sender inn svaret ditt.
+			<br><br><br>
+			<div>
+				<select class="question" id="valg" class="felt" onchange="start(skjema)">
+					<option>Ape</option>
+					<option>Tiger</option>
+					<option>Elefant</option>
+					<option>Giraff</option>
+				</select>
+				<input id="knapp" type="button" value="Gjett svar" onClick="start(skjema)" class="pil">
+			</div><br>
+		</div>
+	</div>	
+	<div id="spin">
+		<img src="./../Vedlegg-INF2-V2020/lykkehjul.png" class="lykkehjul"></img>
+		<img src="./../Vedlegg-INF2-V2020/pil.png" class="pil"></img>
+	</div>
+</form>
+	
+<div id="info"></div>
+
+<div id="arrow"><a href="./../index.html"><input type="image" src="./../arrow.png" width="80" height="80"></a></div>
+
+<script src="oppgave2.js"></script>
+</body>
+</html>

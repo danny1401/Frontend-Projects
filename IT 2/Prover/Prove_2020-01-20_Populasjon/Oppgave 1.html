@@ -1,0 +1,140 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+	<title>Menneskets populasjon</title>
+
+<script>
+function beregnfunction(skjema) {
+
+/*DATO TODAY*/
+var datotid = new Date('2020-01-20');
+console.log(datotid);	
+var day = datotid.getDate();
+var month = datotid.getMonth()+1;
+var year = datotid.getFullYear();
+
+/*POPULASJON*/
+var befolkning = 7759000000;
+var hver_dag = 220000;
+var hver_måned = hver_dag * 30;
+var hvert_år = hver_måned * 12;
+var hver_time = 9130;
+var hvert_min = 152;
+var hvert_sek = 2.5;
+
+/*INPUT DATO*/                         
+var varDato = skjema.dag.value.replace(",",".");
+var fremtid_dato = new Date(varDato);
+var Dag = fremtid_dato.getDate();
+var Måned = fremtid_dato.getMonth()+1;
+var År = fremtid_dato.getFullYear();
+
+/*BEREGNING*/
+if (fremtid_dato >= datotid) {
+	var vekstdag = (Dag - day) * hver_dag;
+	var vekstmåned = (Måned - month) * hver_måned;
+	var vekstår = (År - year) * hvert_år;
+	var fremtidsvekst = befolkning + vekstdag + vekstmåned + vekstår;
+	document.getElementById("resultat").innerHTML='På '+fremtid_dato+',<br> kommer det til å være ca. '+fremtidsvekst+' mennesker i verden.';
+}
+else {
+	document.getElementById("resultat").innerHTML='Dessverre beregner denne bare for populasjonen i fremtiden. <br>Vennligst fyll ut en fremtidig dato.';
+}
+}
+
+/*NULLSTILL?*/
+function restart(skjema) {
+	document.getElementById("resultat").innerHTML='';
+}
+</script>
+<style>
+#boks {	top: 14px; line-height: 1.5; }
+#title { font-size: 32px; margin-bottom: 6px;}
+#line { top: 180px; }
+
+#line1 {
+	position: absolute;
+	top: 280px;
+	left: 0px;
+	width: 100%;
+	border-bottom: 2px solid black;
+}
+#felt {
+	position: relative;
+	top: -207px;
+	left: -240px;
+	width: 900px;
+	font-size: 20px;
+	text-align: left;
+	line-height: 1.5;
+}
+#felt2 {
+	position: relative;
+	top: -162px;
+	width: 900px;
+	font-size: 20px;
+	text-align: left;
+	line-height: 1.5;
+}
+#input {
+	position: relative;
+	top: -2px;
+	padding: 3 -5;
+	border: 1px solid black;
+	font-size: 19px;
+	text-align: center;
+	margin-left: 20px;
+}
+#knapp {
+    position: relative;
+	top: -242px;
+	left: 200px;
+	width: 160px;
+	padding: 4px 0;
+    padding-top: 5px;
+	color: white;
+	background-color: #009999;
+	border: 2px solid black;
+	font-size: 18px;
+	font-weight: 600;
+    text-align: center;
+    text-decoration: none; 
+	margin-right: 70px;
+	z-index: 2;
+}
+</style>
+</head>
+<body>
+<center>
+<div id="bar"></div>
+	<h1 id="navtitle">Oppvarming<strong> </strong>av<strong> </strong>hus</h1>
+	<a href="index.html" class="navbtn" id="navbtn1">Hjem</a>
+	<a href="./Oppgave 1.html" class="navbtn" id="navbtn2">Befolkningsvekst</a>
+	<a href="./Oppgave 2.html" class="navbtn" id="navbtn3">Nedtelling</a>
+	<a href="./Oppgave 3.html" class="navbtn" id="navbtn4">Søylediagram</a>
+</div><br><br><br>
+
+<form name="skjema">	
+<div id="boks">  
+<h1 id="title">Befolkningsvekst</h1>
+Her kan du beregne økningen i populasjonen av mennesker i verdenen.<br>
+Ved å taste inn en dato i fremtiden, vil det komme antall mennesker som lever på den datoen.
+<br>I dag er det ca. 7.759.000.000 mennesker i verdenen.
+<div id="line"></div>
+<div id="line1"></div>
+</div>
+
+<div id="felt">
+	<center><div id="test">Dato:<input id="input" type="date" name="dag" required></div>
+</div>
+	<input id="knapp" type="button" name="beregn" value="Beregn" onClick="beregnfunction(skjema)">
+	<input id="knapp" type="reset" name="nullstill" value="Nullstill" onClick="restart(skjema)">
+<div id="felt2">	
+	<center><div id="resultat">
+	</div>
+</div>
+
+
+</body>
+</html>

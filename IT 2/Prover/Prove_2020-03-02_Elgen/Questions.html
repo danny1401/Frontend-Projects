@@ -1,0 +1,205 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./#.css">	
+	<title>Elgen</title>
+
+<style>
+body {
+	background: linear-gradient(to bottom, #00cc66 0%, #00ff99 100%);
+	background-attachment: fixed;
+	background-size: cover;
+	overflow-x: hidden;
+	font-family: Verdana, sans-serif;
+}
+#title {
+	position: relative;
+	top: 10px;
+	width: 300px;
+	padding: 5px 0px;
+	padding-bottom: 7px;
+	background-color: white;
+	border: 2px solid black;
+	font-size: 45px;
+	text-align: center;
+}
+#info {
+	position: absolute;
+	top: 117px;
+	left: 140px;
+	width: 269px;
+	padding: 24 60;
+	padding-top: 5;
+	border: 2px solid black;
+	background-color: white;
+	font-size: 18px;
+}
+#survey {
+	position: absolute;
+	top: 117px;
+	right: 140px;
+	width: 555px;
+	padding: 20 60;
+	padding-top: 5;
+	border: 2px solid black;
+	background-color: white;
+	font-size: 18px;
+}
+#input {
+	width: 190px;
+	padding: 1px 22px;
+	padding-top: 2px;
+	border: 1px solid black;
+	font-size: 17px;
+	text-align: center;
+	margin:0;
+	margin-left: 10px;
+}
+#knapp {
+	position: relative;
+	top: 342px;
+	right: 150px;
+	padding: 15 75;
+	border: 2px solid black;
+	background-color: white;
+	font-size: 20px;
+	font-family: Verdana, sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+}
+#knapp2 {
+	position: relative;
+	top: 268px;
+	left: 265px;
+	padding: 15 75;
+	border: 2px solid black;
+	background-color: white;
+	font-size: 20px;
+	font-family: Verdana, sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+}
+#BackButton {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	height: 78px; 
+	width: 80px;
+	z-index: 2;
+}
+</style>
+<script>
+function eksempel(skjema) {
+
+var where = skjema.where.value;
+var when = skjema.when.value;
+var meeting = skjema.meeting.value;
+var name = skjema.name.value;
+var tlf = skjema.tlf.value;
+
+var test1 = where;
+var test2 = when;
+var test3 = meeting;
+var test4 = name;
+var test5 = tlf;
+
+document.write ('<object width="100%" height="100%" data="./prove.swf?test1='+test1+'&test2='+test2+'&test3='+test3+'&test4='+test4+'&test5='+test5+'"></object>');
+
+/* LOCALSTORAGE
+function velkommen(){
+    if (typeof localStorage.velkommen === 'undefined'){
+		document.getElementById("text2").id='';
+        document.getElementById("first_visit").innerHTML = "<div class='title1'>Velkommen!</div><p>Dette er ditt første besøk på denne nettsiden.";
+        var dato = new Date();
+        localStorage.velkommen = dato;
+    }
+    else {
+        last_time();
+		visit();
+    }
+}
+function last_time(){
+	var sistVisit = localStorage.velkommen;
+		document.getElementById("text1").id='';
+	document.getElementById("last_time").innerHTML = "<div class='title2'>Velkommen tilbake!</div><p>Siste besøk: <i>"+sistVisit+"</i>.";
+	var dato = new Date();
+	localStorage.velkommen = dato;
+}
+
+function visit(){
+	if("visit" in localStorage){
+		var teller = localStorage.visit;
+		teller = teller.toString();
+		console.log(teller)
+
+		document.getElementById("visit").innerHTML = "Du har vært på besøk her "+teller+" ganger allerede.";
+		teller = parseInt(teller);
+		teller = teller+1;
+		localStorage.visit = teller;
+	} 
+	else {
+		localStorage.visit = 2;
+		teller = 1;
+		document.getElementById("visit").innerHTML = "Du har vært på besøk her "+teller+" ganger allerede.";
+	
+		var teller = lokalStorage.visit;
+		teller = parseInt(teller);
+		teller = teller + 1;
+		localStorage.visit = teller;
+	}
+}
+*/
+
+}
+</script>
+
+</head>
+<body>
+<center>
+<h1 id="title">Elgen</h1>
+<p><br>
+
+<form name="skjema">
+<div id="info">
+<h2>Ditt svar</h2>
+<p style="margin-bottom: 30px">
+<h4 style="line-height:1.4">Du valgte Ja. 
+<p style="margin-bottom: 40px">
+<p>Dette betyr at du har<br> sett en elg før.
+<p style="margin-bottom: 40px">
+<p>Her er en liten undersøkelse om<br> møtet ditt med elgen:</h4>
+</div>
+<p><br>
+
+<div id="survey">
+<h2>Spørreskjema</h2>
+	<p style="margin-top: 29px">
+	<b>Hvor har møtte du elgen?</b>
+	<input type="text" name="where" id="input">
+	<p style="margin-top: 28px">
+
+	<b>Når har møtte du elgen?</b>
+	<input type="text" name="when" id="input">
+	<p style="margin-top: 28px">
+
+	<b>Fortell om møtet ditt med elgen:</b>
+	<input type="text" name="meeting" id="input">
+	<p style="margin-top: 28px">
+	
+	<b>Hva heter du?</b>
+	<input type="text" name="name" id="input">
+	<p style="margin-top: 28px">
+	
+	<b>Hva er telefonnummeret ditt?</b>
+	<input type="number" name="tlf" id="input">
+	<p style="margin-top: 23px">
+</div>
+
+<input id="knapp" type="button" value="Send inn svar" onClick="eksempel(skjema)">
+<strong style="margin-left:9px;"></strong>
+<input id="knapp" type="reset" name="nullstill" value="Nullstill">
+</form>
+
+<a href="./index.html"><button id="knapp2">Tilbake</button></a>
+</body>
+</html>

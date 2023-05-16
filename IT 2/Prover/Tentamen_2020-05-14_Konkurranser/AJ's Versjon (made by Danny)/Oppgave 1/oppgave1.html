@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./oppgave1.css">
+<link href="uno.png" rel="icon" type="image/x-icon" />
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+<title>Oppgave 1</title>
+
+<script>
+function eksempel(skjema) {
+
+var age = skjema.alder.value.replace(",",".");
+
+if (age >= 3 && age <= 11) {
+document.getElementById("test").innerHTML = '';
+document.getElementById("svar").innerHTML = '<div id="info"><h1>Forslag til konkurranser</h1>Siden du er '+age+' år gammel kan du delta i disse konkurransene:<p><li>Barnesanger</li><p><li>Ville dyr - Lykkehjul</li><p><li>Land og flagg</li></div>';
+document.getElementById("tilbake").innerHTML = '<a href="#"><button id="buttonreset">Tilbake</button></a>';
+}
+else if (age >= 12 && age <= 17) {
+document.getElementById("test").innerHTML = '';
+document.getElementById("svar").innerHTML = '<div id="info"><h1>Forslag til konkurranser</h1>Siden du er '+age+' år gammel kan du delta i disse konkurransene:<p><li>Pop & Rock</li><p><li>Bilmerker</li><p><li>Hva vet du om fotball</li></div>';
+document.getElementById("tilbake").innerHTML = '<a href="#"><button id="buttonreset">Tilbake</button></a>';
+}
+else if (age >= 18 && age <= 130) {
+document.getElementById("test").innerHTML = '';
+document.getElementById("svar").innerHTML = '<div id="info"><h1>Forslag til konkurranser</h1>Siden du er '+age+' år gammel kan du delta i disse konkurransene:<p><li>Quiz</li><p><li>Historie i vårt århundre</li><p><li>Påskelabyrint</li></div>';
+document.getElementById("tilbake").innerHTML = '<a href="#"><button id="buttonreset">Tilbake</button></a>';
+}
+
+else { alert( "Sorry, men du må være enten eldre enn 3, eller yngre enn 130." ); }
+}
+
+function nullstill(side) {
+    document.getElementById("test").innerHTML = '<select name="alder"><option value="1">Ja</option><option value="2">Nei</option></select><p><input type="button" name="sendInn" value="Send inn" onClick="eksempel(skjema)">';
+}
+</script>
+</head>
+<body>
+<center>
+
+<form name="skjema">
+<div id="test">
+	<div id="boks">
+		<center><h1>Forslag til konkurranser</h1></center>
+		Her kan du få forslag for konkurranser du kan delta i basert på alderen din.
+		<br><br><br>
+		<h4>Tast inn alder: <input type="number" name="alder" value="0" id="input"></h4>
+
+		<input id="buttonstart" type="button" value="Sjekk forslagene dine" onClick="eksempel(skjema)">
+	</div>
+</div>
+	<div id="svar"></div>
+	<div id="tilbake"></div>
+</form>
+<div id="arrow"><a href="./../index.html"><input type="image" src="./../arrow.png" width="80" height="80"></a></div>
+
+</body>
+</html>

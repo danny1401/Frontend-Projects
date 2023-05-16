@@ -1,0 +1,109 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./style.css">	
+	<title>Menneskets populasjon</title>
+
+<style>
+#boks {	top: 18px; line-height: 1.4; }
+#title { font-size: 32px; margin-bottom: 15px;}
+#line {	top: 140px; }
+
+#felt {
+	position: relative;
+	top: -248px;
+	left: 150px;
+	width: 900px;
+	font-size: 20px;
+	text-align: left;
+	line-height: 1.5;
+}
+.input {
+	position: absolute;
+	right: 300px;
+	padding: 3 0;
+	border: 1px solid black;
+	font-size: 19px;
+	text-align: center;
+	margin-top: 0px;
+}
+</style>
+</head>
+<body>
+<center>
+<div id="bar"></div>
+	<a href="index.html" class="navbtn" id="navbtn1">Hjem</a>
+	<a href="./Oppgave 1.html" class="navbtn" id="navbtn2">Befolkningsvekst</a>
+	<a href="./Oppgave 2.html" class="navbtn" id="navbtn3">Nedtelling</a>
+	<a href="./Oppgave 3.html" class="navbtn" id="navbtn4">Søylediagram</a>
+</div><br><br><br><br><br><br>
+
+<div id="boks"><h2 id="title">Nedtelling til 8 milliarder mennesker</h2>
+Tiden nedenfor viser hvor lenge det er igjen til befolkningen når 8 milliarder mennesker på jorda.
+<div id="line"></div></div>
+<div id="felt">
+	Antall gjenstående minutter: 
+	<input type="text" id="restminutter" class="input">
+	<p>
+	Antall gjenstående timer: 
+	<input type="text" id="resttimer" class="input">
+	<p>
+	Antall gjenstående dager:
+	<input type="text" id="restdager" class="input">
+	<p>
+	Antall gjenstående måneder: 
+	<input type="text" id="restmonth" class="input">
+	<p>
+	Antall gjenstående år: <input type="text" id="restyear" class="input">
+</div>
+
+</center>
+<script>
+var teller = 1;
+
+setInterval(function() {
+	var dagtid = new Date('2023-02-06T00:00:00')
+	var newYear = dagtid.getTime()
+	console.log(newYear);
+	var nowTime = new Date().getTime();
+	
+	var resttid = newYear - nowTime;             //milisekunder
+	var restsekunder = resttid/1000;     	     //sekunder
+	var restminutter = restsekunder/60;          //minutter
+	var resttimer = restminutter/60;             //timer
+	var restdager = parseInt(resttimer/24);      //dager, avrundet verdi, heltall.
+	var restmonth = parseInt(restdager/30);      //måneder, avrundet verdi, heltall.
+	var restyear = (restmonth/12);               //år
+
+	resttid = resttid.toString();
+	restsekunder = restsekunder.toString();
+	restminutter = restminutter.toString();
+	resttimer = resttimer.toString();
+	restdager = restdager.toString();
+	restmonth = restmonth.toString();
+	restyear = restyear.toString();
+
+	while (resttid > 0) {             
+		document.getElementById("title").innerHTML = "Nedtelling til 8 milliarder mennesker";
+
+		document.getElementById("restminutter").value = restminutter;
+		document.getElementById("resttimer").value = resttimer;
+		document.getElementById("restdager").value = restdager;
+		document.getElementById("restmonth").value = restmonth;
+		document.getElementById("restyear").value = restyear;
+		resttid = 0;
+		
+		if (teller == 1) {
+			document.getElementById("title").style.color = "blue";
+			teller = 2;
+		}
+		else if (teller != 1) {
+			document.getElementById("title").style.color = "red";
+			teller = 1;
+		}
+    }                
+}, 2000);
+
+</script>
+</body>
+</html>

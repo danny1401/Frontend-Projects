@@ -1,0 +1,100 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./style.css">	
+	<title>Konkurranser</title>
+
+<style>
+#input {
+	position: relative;
+	top: 1px;
+	width: 160px;
+	padding: 4 10;
+	border: 1px solid black;
+	font-size: 22px;
+	text-align: center;
+	margin-left: 20px;
+}
+#info {
+	position: relative;
+	top: 18px;
+	width: 900px;
+	height: 400px;
+	padding: 5px 20;
+	border: 2px solid black;
+	background-color: white;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 14px;
+}	
+#knapp {
+	position: relative;
+	top: 65px;
+	padding: 13 60;
+	border: 2px solid black;
+	background-color: whitesmoke;
+	font-size: 21px;
+	font-weight: bold;
+	cursor: pointer;
+}
+#knapp2 {
+	position: relative;
+	top: -96px;
+	padding: 13 70;
+	border: 2px solid black;
+	background-color: whitesmoke;
+	font-size: 21px;
+	font-weight: bold;
+	cursor: pointer;
+}
+li { position:relative; left: 140px; text-align: left; margin-bottom: 25;}
+</style>
+<script>
+function eksempel(skjema) {
+
+var alder = skjema.alder.value.replace(",",".");
+
+if (alder >= 3 && alder <= 11) {
+    document.getElementById("test").innerHTML = '';
+	document.getElementById("svar").innerHTML = '<div id="info"><h2>Konkurranser</h2>Siden alderen din er '+alder+' år, vil du ha mulighet til å delta i følgende konkurranser:<p><li>Barnesanger</li><p><li>Ville dyr - Lykkehjul</li><p><li>Land og flagg</li></div>';
+	document.getElementById("tilbake").innerHTML = '<a href="./oppgave1.html"><button id="knapp2">Tilbake</button></a><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
+}
+else if (alder >= 12 && alder <= 17) {
+    document.getElementById("test").innerHTML = '';
+	document.getElementById("svar").innerHTML = '<div id="info"><h2>Konkurranser</h2>Siden alderen din er '+alder+' år, vil du ha mulighet til å delta i følgende konkurranser:<p><li>Pop & Rock</li><p><li>Bilmerker</li><p><li>Hva vet du om fotball</li></div>';
+	document.getElementById("tilbake").innerHTML = '<a href="./oppgave1.html"><button id="knapp2">Tilbake</button></a><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
+}
+else if (alder >= 18 && alder <= 130) {
+    document.getElementById("test").innerHTML = '';
+	document.getElementById("svar").innerHTML = '<div id="info"><h2>Konkurranser</h2>Siden alderen din er '+alder+' år, vil du ha mulighet til å delta i følgende konkurranser:<p><li>Quiz</li><p><li>Historie i vårt århundre</li><p><li>Påskelabyrint</li></div>';
+	document.getElementById("tilbake").innerHTML = '<a href="./oppgave1.html"><button id="knapp2">Tilbake</button></a><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>';
+}
+
+else { alert( "Du må oppgi et tall mellom 3 og 130." ); }
+}
+</script>
+</head>
+<body>
+<center>
+<a href="./index.html"><img src="./backbuttonW.png" id="BackButton"></img></a>
+<h1 id="title">KONKURRANSER</h1>
+<br><br><br><br><br><br><br>
+
+
+<form name="skjema">
+<div id="test">
+	<div id="boks">
+		<center><h2>Informasjon</h2></center>
+		På denne nettsiden kan du velge hvilke konkurranser du vil delta ta i basert på din alder.
+		<br><br><br>
+		<h4>Oppgi din alder: <input type="number" name="alder" value="0" id="input"></h4>
+		
+		<input id="knapp" type="button" value="Send inn svar" onClick="eksempel(skjema)">
+	</div>
+</div>
+	<div id="svar"></div>
+	<div id="tilbake"></div>
+</form>
+
+</body>
+</html>

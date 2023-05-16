@@ -1,0 +1,376 @@
+﻿<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./oppgave3.css">
+<link href="tres.png" rel="icon" type="image/x-icon" />
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+<title>Oppgave 3</title>
+
+<script>
+var riktig = [];
+document.getElementById("sp").innerHTML="<h2>test</h2>";
+
+function start1 () {	
+	velkommen.innerHTML = "";
+	sp1.style.display = "block";
+	
+	if (valg1 === "Velg et land") {alert("Vennligst velg et land!");}
+	else {
+		rikitg = [];
+		svard1.style.display ="block";
+	}
+}
+function start11 () {
+	var valg1 = document.getElementById("valg1").value;
+	var svar1 = document.getElementById("svar1").value;
+
+	if (svar1 === "") {alert("Vennligst skriv et svar!");}
+	else {
+		rikitg = [];
+		svard1.style.display ="block";
+		
+		if (valg1 === "Norge") {
+			if(svar1 === "oslo" || svar1 === "Oslo" || svar1 === "OSLO"){
+				riktig.push(svar1);
+				console.log(riktig);
+				sp1.innerHTML = "<h2>Spørsmål 1</h2><br><b>Svaret ditt:</b> "+svar1+"<p><b>Resultat:</b> Det er riktig svar på spørsmål 1!<p>Du får 2 poeng.<p><input type='button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start2()'> ";
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='applause.mp3' type='audio/ogg'></audio>";
+			}
+			else {
+				sp1.innerHTML = "<h2>Spørsmål 1</h2><br><b>Svaret ditt:</b> "+svar1+"<p><b>Resultat:</b> Det er dessverre feil på spørsmål 1.<p>Du får 0 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start2()'> ";
+				riktig.push("feil");
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='error.mp3' type='audio/ogg'></audio>";
+			}
+		}
+			
+		if (valg1 === "Italia") {
+			if(svar1 === "roma" || svar1 === "Roma" || svar1 === "ROMA"){
+				riktig.push(svar1);
+				console.log(riktig);
+				sp1.innerHTML = "<h2>Spørsmål 1</h2><br><b>Svaret ditt:</b> "+svar1+"<p><b>Resultat:</b> Det er riktig svar på spørsmål 1!<p>Du får 10 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start2()'> ";
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='applause.mp3' type='audio/ogg'></audio>";
+			}
+			else {
+				sp1.innerHTML = "<h2>Spørsmål 1</h2><br><b>Svaret ditt:</b> "+svar1+"<p><b>Resultat:</b> Det er dessverre feil på spørsmål 1.<p>Du får 0 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start2()'> ";
+				riktig.push("feil");
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='error.mp3' type='audio/ogg'></audio>";
+			}
+		}
+
+		if (valg1 === "Peru") {
+			if(svar1 === "lima" || svar1 === "Lima" || svar1 === "LIMA"){
+				riktig.push(svar1);
+				console.log(riktig);
+				sp1.innerHTML = "<h2>Spørsmål 1</h2><br><b>Svaret ditt:</b> "+svar1+"<p><b>Resultat:</b> Det er riktig svar på spørsmål 1!<p>Du får 50 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start2()'> ";
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='applause.mp3' type='audio/ogg'></audio>";
+			}
+			else {
+				sp1.innerHTML = "<h2>Spørsmål 1</h2><br><b>Svaret ditt:</b> "+svar1+"<p><b>Resultat:</b> Det er dessverre feil på spørsmål 1.<p>Du får 0 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start2()'> ";
+				riktig.push("feil");
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='error.mp3' type='audio/ogg'></audio>";
+			}
+		}
+
+		if (valg1 === "Pakistan") {
+			if(svar1 === "islamabad" || svar1 === "Islamabad" || svar1 === "ISLAMABAD"){
+				riktig.push(svar1);
+				console.log(riktig);
+				sp1.innerHTML = "<h2>Spørsmål 1</h2><br><b>Svaret ditt:</b> "+svar1+"<p><b>Resultat:</b> Det er riktig svar på spørsmål 1!<p>Du får 90 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start2()'> ";
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='applause.mp3' type='audio/ogg'></audio>";
+			}
+			else {
+				sp1.innerHTML = "<h2>Spørsmål 1</h2><br><b>Svaret ditt:</b> "+svar1+"<p><b>Resultat:</b> Det er dessverre feil på spørsmål 1.<p>Du får 0 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start2()'> ";
+				riktig.push("feil");
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='error.mp3' type='audio/ogg'></audio>";
+			}
+		}
+			
+		if (valg1 === "Angola") {
+			if(svar1 === "luanda" || svar1 === "Luanda" || svar1 === "LUANDA"){
+				riktig.push(svar1);
+				console.log(riktig);
+				sp1.innerHTML = "<h2>Spørsmål 1</h2><br><b>Svaret ditt:</b> "+svar1+"<p><b>Resultat:</b> Det er riktig svar på spørsmål 1!<p>Du får 100 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start2()'> ";
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='applause.mp3' type='audio/ogg'></audio>";
+			}
+			else {
+				sp1.innerHTML = "<h2>Spørsmål 1</h2><br><b>Svaret ditt:</b> "+svar1+"<p><b>Resultat:</b> Det er dessverre feil på spørsmål 1.<p>Du får 0 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start2()'> ";
+				riktig.push("feil");
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='error.mp3' type='audio/ogg'></audio>";
+			}
+		}
+	}
+}
+
+
+function start2 () {
+	sp1.innerHTML = "";
+	sp2.style.display = "block";
+
+	if (valg2 === "Velg et navn") {alert("Vennligst velg et navn!");}
+	else {
+		rikitg = [];
+		svard2.style.display ="block";
+	}
+}
+
+function start21 () {
+	var valg2 = document.getElementById("valg2").value;
+	var svar2 = document.getElementById("svar2").value;
+
+	if (svar2 === "") {
+		alert("Vennligst skriv et svar!");
+	}
+	else {
+		rikitg = [];
+		svard2.style.display ="block";
+		
+		if (valg2 === "Marshall Bruce Mathers") {
+			if(svar2 === "eminem" || svar2 === "Eminem" || svar2 === "EMINEM"){
+				riktig.push(svar2);
+				console.log(riktig);
+				sp2.innerHTML = "<h2>Spørsmål 2</h2><br><b>Svaret ditt:</b> "+svar2+"<p><b>Resultat:</b> Det er riktig svar på spørsmål 2!<p>Du får 35 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start3()'> ";
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='applause.mp3' type='audio/ogg'></audio>";
+			}
+			else {
+				sp2.innerHTML = "<h2>Spørsmål 2</h2><br><b>Svaret ditt:</b> "+svar2+"<p><b>Resultat:</b> Det er dessverre feil på spørsmål 2.<p>Du får 0 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start3()'> ";
+				riktig.push("feil");
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='error.mp3' type='audio/ogg'></audio>";
+			}
+		}
+
+		if (valg2 === "Curtis James Jackson") {
+			if(svar2 === "50 cent" || svar2 === "50 Cent" || svar2 === "50 CENT"){
+				riktig.push(svar2);
+				console.log(riktig);
+				sp2.innerHTML = "<h2>Spørsmål 2</h2><br><b>Svaret ditt:</b> "+svar2+"<p><b>Resultat:</b> Det er riktig svar på spørsmål 2!<p>Du får 100 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start3()'> ";
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='applause.mp3' type='audio/ogg'></audio>";
+			}
+			else {
+				sp2.innerHTML = "<h2>Spørsmål 2</h2><br><b>Svaret ditt:</b> "+svar2+"<p><b>Resultat:</b> Det er dessverre feil på spørsmål 2.<p>Du får 0 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start3()'> ";
+				riktig.push("feil");
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='error.mp3' type='audio/ogg'></audio>";
+			}
+		}
+
+		if (valg2 === "Alecia Beth Moore") {
+			if(svar2 === "pink" || svar2 === "Pink" || svar2 === "PINK"){
+				riktig.push(svar2);
+				console.log(riktig);
+				sp2.innerHTML = "<h2>Spørsmål 2</h2><br><b>Svaret ditt:</b> "+svar2+"<p><b>Resultat:</b> Det er riktig svar på spørsmål 2!<p>Du får 36 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start3()'> ";
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='applause.mp3' type='audio/ogg'></audio>";
+			}
+			else {
+				sp2.innerHTML = "<h2>Spørsmål 2</h2><br><b>Svaret ditt:</b> "+svar2+"<p><b>Resultat:</b> Det er dessverre feil på spørsmål 2.<p>Du får 0 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start3()'> ";
+				riktig.push("feil");
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='error.mp3' type='audio/ogg'></audio>";
+			}
+		}
+
+		if (valg2 === "Andreas Haukeland") {
+			if(svar2 === "tix" || svar2 === "Tix" || svar2 === "TIX"){
+				riktig.push(svar2);
+				console.log(riktig);
+				sp2.innerHTML = "<h2>Spørsmål 2</h2><br><b>Svaret ditt:</b> "+svar2+"<p><b>Resultat:</b> Det er riktig svar på spørsmål 2!<p>Du får 9 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start3()'> ";
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='applause.mp3' type='audio/ogg'></audio>";
+			}
+			else {
+				sp2.innerHTML = "<h2>Spørsmål 2</h2><br><b>Svaret ditt:</b> "+svar2+"<p><b>Resultat:</b> Det er dessverre feil på spørsmål 2.<p>Du får 0 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start3()'> ";
+				riktig.push("feil");
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='error.mp3' type='audio/ogg'></audio>";
+			}
+		}
+	}
+}
+
+
+function start3 () {
+	sp2.innerHTML = "";
+	sp3.style.display = "block";
+
+	if (valg3 === "Velg et år") {alert("Vennligst velg et år!");}
+	else {
+		rikitg = [];
+		svard3.style.display ="block";
+	}
+}
+
+function start31 () {
+	var valg3 = document.getElementById("valg3").value;
+	var svar3 = document.getElementById("svar3").value;
+
+	if (svar3 === "") {alert("Vennligst skriv et svar!");}
+	else {
+		rikitg = [];
+		svard3.style.display ="block";
+	
+		if (valg3 === "1900") {
+			if(svar3 === "paris" || svar3 === "Paris" || svar3 === "PARIS"){
+				riktig.push(svar3);
+				console.log(riktig);
+				sp3.innerHTML = "<h2>Spørsmål 3</h2><br><b>Svaret ditt:</b> "+svar3+"<p><b>Resultat:</b> Det er riktig svar på spørsmål 3!<p>Du får 95 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start4()'> ";
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='applause.mp3' type='audio/ogg'></audio>";
+			}
+			else {
+				sp3.innerHTML = "<h2>Spørsmål 3</h2><br><b>Svaret ditt:</b> "+svar3+"<p><b>Resultat:</b> Det er dessverre feil på spørsmål 3.<p>Du får 0 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start4()'> ";
+				riktig.push("feil");
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='error.mp3' type='audio/ogg'></audio>";
+			}
+		}
+		
+		if (valg3 === "1988") {
+			if(svar3 === "seoul" || svar3 === "Seoul" || svar3 === "SEOUL"){
+				riktig.push(svar3);
+				console.log(riktig);
+				sp3.innerHTML = "<h2>Spørsmål 3</h2><br><b>Svaret ditt:</b> "+svar3+"<p><b>Resultat:</b> Det er riktig svar på spørsmål 3!<p>Du får 100 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start4()'> ";
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='applause.mp3' type='audio/ogg'></audio>";
+			}
+			else {
+				sp3.innerHTML = "<h2>Spørsmål 3</h2><br><b>Svaret ditt:</b> "+svar3+"<p><b>Resultat:</b> Det er dessverre feil på spørsmål 3.<p>Du får 0 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start4()'> ";
+				riktig.push("feil");
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='error.mp3' type='audio/ogg'></audio>";
+			}
+		}
+
+		if (valg3 === "2000") {
+			if(svar3 === "sydney" || svar3 === "Sydney" || svar3 === "SYDNEY"){
+				riktig.push(svar3);
+				console.log(riktig);
+				sp3.innerHTML = "<h2>Spørsmål 3</h2><br><b>Svaret ditt:</b> "+svar3+"<p><b>Resultat:</b> Det er riktig svar på spørsmål 3!<p>Du får 85 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start4()'> ";
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='applause.mp3' type='audio/ogg'></audio>";
+			}
+			else {
+				sp3.innerHTML = "<h2>Spørsmål 3</h2><br><b>Svaret ditt:</b> "+svar3+"<p><b>Resultat:</b> Det er dessverre feil på spørsmål 3.<p>Du får 0 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start4()'> ";
+				riktig.push("feil");
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='error.mp3' type='audio/ogg'></audio>";
+			}
+		}
+
+		if (valg3 === "2012") {
+			if(svar3 === "london" || svar3 === "London" || svar3 === "LONDON"){
+				riktig.push(svar3);
+				console.log(riktig);
+				sp3.innerHTML = "<h2>Spørsmål 3</h2><br><b>Svaret ditt:</b> "+svar3+"<p><b>Resultat:</b> Det er riktig svar på spørsmål 3!<p>Du får 31 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start4()'> ";
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='applause.mp3' type='audio/ogg'></audio>";
+			}
+			else {
+				sp3.innerHTML = "<h2>Spørsmål 3</h2><br><b>Svaret ditt:</b> "+svar3+"<p><b>Resultat:</b> Det er dessverre feil på spørsmål 3.<p>Du får 0 poeng.<p><input type = 'button' id='button' name ='beregn' value = 'Neste spørsmål' onClick='start4()'> ";
+				riktig.push("feil");
+				document.getElementById("lyd").innerHTML="<audio controls autoplay style='display:none;'><source src='error.mp3' type='audio/ogg'></audio>";
+			}
+		}
+	}
+}
+
+
+function start4 () {
+	sp3.innerHTML = "";
+	result.style.display ="block";
+	
+	if (riktig[0] === "oslo" || riktig[0] === "Oslo" || riktig[0] === "OSLO") { var poeng1 = 2; }
+	if (riktig[0] === "roma" || riktig[0] === "Roma" || riktig[0] === "ROMA") {	var poeng1 = 10; }
+	if (riktig[0] === "lima" || riktig[0] === "Lima" || riktig[0] === "LIMA") {	var poeng1 = 50; }
+	if (riktig[0] === "islamabad" || riktig[0] === "Islamabad" || riktig[0] === "ISLAMABAD") { var poeng1 = 90; }
+	if (riktig[0] === "luanda" || riktig[0] === "Luanda" || riktig[0] === "LUANDA") { var poeng1 = 100; }
+	
+//-----------------------------------------------------------------------------------
+
+	if (riktig[1] === "eminem" || riktig[1] === "Eminem" || riktig[1] === "EMINEM") { var poeng2 = 35; }
+	if (riktig[1] === "50 cent" || riktig[1] === "50 Cent" || riktig[1] === "50 CENT") { var poeng2 = 100; }
+	if (riktig[1] === "pink" || riktig[1] === "Pink" || riktig[1] === "PINK") { var poeng2 = 36; }
+	if (riktig[1] === "tix" || riktig[1] === "Tix" || riktig[1] === "TIX") { var poeng2 = 9; }
+	
+//-----------------------------------------------------------------------------
+
+	if (riktig[2] === "paris" || riktig[2] === "Paris" || riktig[2] === "PARIS") { var poeng3 = 95; }
+	if (riktig[2] === "seoul" || riktig[2] === "Seoul" || riktig[2] === "SEOUL") { var poeng3 = 100; }
+	if (riktig[2] === "sydney" || riktig[2] === "Sydney" || riktig[2] === "SYDNEY") { var poeng3 = 85; }
+	if (riktig[2] === "london" || riktig[2] === "London" || riktig[2] === "LONDON") { var poeng3 = 31; }
+
+//-----------------------------------------------------------------------------
+
+if (riktig[0] === "feil") { var poeng1 = 0; }
+if (riktig[1] === "feil") { var poeng2 = 0; }
+if (riktig[2] === "feil") { var poeng3 = 0; }
+
+var sum = poeng1 + poeng2 + poeng3;
+
+result.innerHTML = "<h2>Dine resultater</h2><p><b>Spørsmål 1:</b> "+riktig[0]+" = "+poeng1+" poeng<p><b>Spørsmål 2:</b> "+riktig[1]+" = "+poeng2+" poeng<p><b>Spørsmål 3:</b> "+riktig[2]+" = "+poeng3+" poeng<p>Totalt har du fått "+sum+" poeng.</h3><br><a href='./oppgave3.html'><input type='button' id='button' name='beregn' value='Prøv igjen'>";
+
+}
+</script>
+</head>
+<body>
+<center>
+	<h1 id="title">Quiz</h1>
+<form>
+	<div id="boks">
+		<div id="velkommen" onload="start()"><p><br><br>
+			<h2>Velkommen!</h2>
+			I denne konkurransen kan du prøve deg på en quiz.<p id="start">
+			<input type="button" id="button" name="beregn" value="Gå videre" onClick="start1()">
+		</div>
+
+		<div id="sp1">
+			<h2>Spørsmål 1</h2>
+			Hva er hovedstaten i:
+			<select id="valg1" onchange="start1()">
+				<option>Velg et land</option>
+				<option>Norge</option>
+				<option>Italia</option>
+				<option>Peru</option>
+				<option>Pakistan</option>
+				<option>Angola</option>
+			</select>
+			<p><br>
+			<div id="svard1">
+				<i>Oppgi svaret ditt her:</i>
+				<input type="text" id="svar1" class="input"><p>
+				<input type="button" id="button" name="beregn" value="Gå videre" onClick="start11()"> 
+			</div>
+		</div>
+ 
+		<div id="sp2">
+			<h2>Spørsmål 2</h2>
+			Hvilket artistnavn har stjernen: 
+			<select id="valg2" onchange="start2()">
+				<option>Velg et navn</option>
+				<option>Marshall Bruce Mathers</option>
+				<option>Curtis James Jackson</option>
+				<option>Alecia Beth Moore</option>
+				<option>Andreas Haukeland</option>
+			</select>
+			<p><br>
+			<div id="svard2">
+				<i>Oppgi svaret ditt her:</i>
+				<input type="text" id="svar2" class="input"><p>
+				<input type="button" id="button" name="beregn" value="Gå videre" onClick="start21()"> 
+			</div>
+		</div>
+
+		<div id="sp3">
+			<h2>Spørsmål 3</h2>
+			Hvor ble sommer-OL arrangert i:
+			<select id="valg3" onchange="start3()">
+				<option>Velg et år</option>
+				<option>1900</option>
+				<option>1988</option>
+				<option>2000</option>
+				<option>2012</option>
+			</select>
+			<p><br>
+			<div id="svard3">
+				<i>Oppgi svaret ditt her:</i>
+				<input type ="text" id="svar3" class="input"><p>
+				<input type = "button" id="button" name ="beregn" value = "Gå videre" onClick="start31()"> 
+			</div>
+		</div>
+ 
+	<div id="result">
+		<h2>Resultatet</h2><br>
+		<div id="lyd"></div>
+	</div>
+</form>
+</center>
+<div id="arrow"><a href="./../index.html"><input type="image" src="./../arrow.png" width="80" height="80"></a></div>
+</body>
+</html>

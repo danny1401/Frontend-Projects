@@ -1,0 +1,88 @@
+﻿<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+<script>
+function start(skjema) {
+var valg = document.getElementById("valg").value;
+
+	if (valg === "Velg Dyr") {
+		alert("Vennligst velg et dyr for å gjette!");
+	}
+	else {
+		localStorage.setItem(1, valg);
+		localStorage.getItem(1);
+		document.getElementById("lykkehjul").style.display ="block";
+	}
+}
+</script>
+<style>
+body {
+	background-image: url(./Vedlegg-INF2-V2020/bakgrunn.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+	background-size: cover;
+	overflow: hidden;
+}
+#boks1 {
+	position: absolute;
+	top: 130px;
+	left: 130px;
+	width: 500px;
+	height: 440px;
+	padding: 5px 50;
+	border: 2px solid black;
+	background-color: white;
+	font-size: 20px;
+	text-align: left;
+	opacity: 0.95;
+}	
+#knapp {
+	position: absolute;
+	top: 185px;
+	left: 180px;
+	width: 200px;
+	padding: 13 20;
+	border: 2px solid black;
+	background-color: whitesmoke;
+	font-size: 21px;
+	font-weight: bold;
+	cursor: pointer;
+}
+h3 { margin-bottom: 5;}
+</style>
+</head>
+<body>
+<center>
+<a href="./index.html"><img src="./backbuttonW.png" id="BackButton"></img></a>
+<h1 id="title">KONKURRANSER</h1>
+<br><br><br><br><br><br><br>
+
+<div id="boks1">
+	<form name="skjema">
+		<center><h2>Lykkehjul</h2></center>
+		Her kan du prøve deg på et lykkehjul hvor målet er å gjette det riktige dyret. Vennligst velg et dyr før du sender inn svaret ditt.
+		<br><br><br>
+		<div>
+			<select class="question" id="valg" onchange="start(skjema)">
+				<option>Velg dyr</option>
+				<option>Ape</option>
+				<option>Tiger</option>
+				<option>Elefant</option>
+				<option>Giraff</option>
+			</select>
+			<input id="knapp" type="button" value="Send inn svar" onClick="start(skjema)" class="pil">
+		</div><br>
+		<div id="info"></div>
+
+		<div id="spin">
+			<img src="Vedlegg-INF2-V2020/lykkehjul.png" class="lykkehjul"></img>
+			<img src="Vedlegg-INF2-V2020/pil.png" class="pil"></img>
+		</div>
+	</form>
+</div>
+<div id="back"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

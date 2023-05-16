@@ -1,0 +1,48 @@
+body{
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(WPP.jpg);
+  background-size: 100%;
+}
+#header{
+	position: relative;
+	top: 31px;	
+	font-size: 45px;
+	color: white;
+	font-family: 'Fredoka One', cursive;
+}
+
+#buttons {
+  position: relative;
+  top: 180px;
+}
+
+.leggo{
+background:#3cbce1;
+color: white;
+box-shadow: 0 3px 0 #1fa4cb;
+border: 2px solid pink;
+box-sizing: border-box;
+cursor: pointer;
+font-size: 20px;
+font-family: 'Kanit', sans-serif;
+font-weight: 700;
+line-height: 1;
+margin: 20px;
+padding: 20px 35px;
+text-align: center;
+text-decoration: none;
+display:inline-block;
+outline:none;
+text-shadow:0 1px 1px rgba(0, 0, 0, 0.5);
+-webkit-transition: all 0.2s ease-in-out 0s;
+-moz-transition: all 0.2s ease-in-out 0s;
+-ms-transition: all 0.2s ease-in-out 0s;
+transition: all 0.2s ease-in-out 0s;
+}
+.leggo:hover { background:#56d7ed; }
+.leggo:active{ background:#2fb7df; }
+
+#arrow {
+	position: absolute;
+	top: 5%;
+	left: 2%;
+}
