@@ -1,0 +1,276 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=1366, initial-scale=1">
+	<title>Juletre</title>
+
+<style>
+body {
+	overflow: hidden;
+	font-family: HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+#title {
+	position: absolute;
+	top: -30px;
+	left: 0;
+	width: 100%;
+	padding: 22px 0;
+	color: white;
+	background-color: #004d00;
+	border-bottom: 5px solid #001a00;
+	font-size: 45px;
+	letter-spacing: 3;
+}
+#juletre {
+	position: relative;
+	top: 110px;
+	left: -15px;
+	width: 430px;
+	height: 480px;
+	z-index: -1;
+}
+#rod_kule1 { position: absolute; top: 305px; left: 630px; }
+#rod_kule2 { position: absolute; top: 455px; left: 635px; }
+#rod_kule3 { position: absolute; top: 380px; right: 635px; }
+#rod_kule4 { position: absolute; top: 270px; right: 660px; }
+#rod_kule5 { position: absolute; top: 435px; left: 590px; }
+#rod_kule6 { position: absolute; top: 360px; right: 685px; }
+#rod_kule7 { position: absolute; top: 180px; left: 655px; }
+#rod_kule8 { position: absolute; top: 445px; right: 615px; }
+
+#gul_kule1 { position: absolute; top: 215px; right: 675px; }
+#gul_kule2 { position: absolute; top: 395px; left: 610px; }
+#gul_kule3 { position: absolute; top: 310px; right: 660px; }
+#gul_kule4 { position: absolute; top: 255px; left: 635px; }
+#gul_kule5 { position: absolute; top: 345px; left: 610px; }
+#gul_kule6 { position: absolute; top: 475px; left: 690px; }
+#gul_kule7 { position: absolute; top: 415px; right: 670px; }
+#gul_kule8 { position: absolute; top: 480px; left: 605px; }
+
+#hjerte { position: absolute; top: 285px; right: 635px;}
+
+#lys { position: absolute; top: 120px; left: 631px; }
+
+#gaver1 { position: absolute; top: 490px; left: 485px; }
+#gaver2 { position: absolute; top: 495px; right: 520px; }
+
+#gavepapir { position: absolute; top: 455px; left: 370px; }
+#leke1 { position: absolute; top: 530px; left: 510px; }
+#leke2 { position: absolute; top: 495px; right: 640px; }
+#leke3 { position: absolute; top: 495px; right: 550px; }
+#leke4 { position: absolute; top: 495px; right: 390px; }
+#leke4 { position: absolute; top: 465px; right: 390px; }
+#leke5 { position: absolute; top: 300px; right: 410px; }
+
+button {
+	width: 200px;
+	padding: 8px 0;
+	color: white;
+	background-color: #004d00;
+	border: 3px solid #001a00;
+	font-size: 19px;
+	outline: none;
+}
+.btnL1 { position:absolute; top:140px; left:120px; }
+.btnL2 { position:absolute; top:220px; left:120px; }
+.btnL3 { position:absolute; top:300px; left:120px; }
+.btnL4 { position:absolute; top:380px; left:120px; }
+.btnL5 { position:absolute; top:460px; left:120px; }
+.btnL6 { position:absolute; top:540px; left:120px; }
+
+.btnR1 { position:absolute; top:140px; right:120px; }
+.btnR2 { position:absolute; top:220px; right:120px; }
+.btnR3 { position:absolute; top:300px; right:120px; }
+.btnR4 { position:absolute; top:380px; right:120px; }
+.btnR5 { position:absolute; top:460px; right:120px; }
+.btnR6 { position:absolute; top:540px; right:120px; }
+
+#BackButton {
+	position: absolute;
+	top: 14px;
+	left: 20px;
+	height: 68px; 
+	width: 70px;
+	z-index: 2;
+}
+</style>
+<script>
+function rod_kule_inn() {
+    console.log("vis rode kuler");
+    document.getElementById("rod_kule1").innerHTML='<img src="./rod_kule1.png" style="height: 40px;"></img>';
+    document.getElementById("rod_kule2").innerHTML='<img src="./rod_kule2.png" style="height: 30px;"></img>';
+    document.getElementById("rod_kule3").innerHTML='<img src="./rod_kule1.png" style="height: 40px;"></img>';
+    document.getElementById("rod_kule4").innerHTML='<img src="./rod_kule2.png" style="height: 30px;"></img>';
+    document.getElementById("rod_kule5").innerHTML='<img src="./rod_kule1.png" style="height: 40px;"></img>';
+    document.getElementById("rod_kule6").innerHTML='<img src="./rod_kule2.png" style="height: 30px;"></img>';
+    document.getElementById("rod_kule7").innerHTML='<img src="./rod_kule1.png" style="height: 40px;"></img>';
+    document.getElementById("rod_kule8").innerHTML='<img src="./rod_kule2.png" style="height: 30px;"></img>';
+}
+function rod_kule_ut() {
+    console.log("vis rode kuler");
+    document.getElementById("rod_kule1").innerHTML='';
+    document.getElementById("rod_kule2").innerHTML='';
+    document.getElementById("rod_kule3").innerHTML='';
+    document.getElementById("rod_kule4").innerHTML='';
+    document.getElementById("rod_kule5").innerHTML='';
+    document.getElementById("rod_kule6").innerHTML='';
+    document.getElementById("rod_kule7").innerHTML='';
+    document.getElementById("rod_kule8").innerHTML='';
+}
+function gul_kule_inn() {
+    console.log("vis gule kuler");
+    document.getElementById("hjerte").innerHTML='';
+    document.getElementById("gul_kule1").innerHTML='<img src="./gul_kule1.png" style="height: 40px;"></img>';
+    document.getElementById("gul_kule2").innerHTML='<img src="./gul_kule2.png" style="height: 32px;"></img>';
+    document.getElementById("gul_kule3").innerHTML='<img src="./gul_kule1.png" style="height: 40px;"></img>';
+    document.getElementById("gul_kule4").innerHTML='<img src="./gul_kule2.png" style="height: 32px;"></img>';
+    document.getElementById("gul_kule5").innerHTML='<img src="./gul_kule1.png" style="height: 40px;"></img>';
+    document.getElementById("gul_kule6").innerHTML='<img src="./gul_kule2.png" style="height: 32px;"></img>';
+    document.getElementById("gul_kule7").innerHTML='<img src="./gul_kule1.png" style="height: 40px;"></img>';
+    document.getElementById("gul_kule8").innerHTML='<img src="./gul_kule2.png" style="height: 32px;"></img>';
+}
+function gul_kule_ut() {
+    console.log("vis gule kuler");
+    document.getElementById("gul_kule1").innerHTML='';
+    document.getElementById("gul_kule2").innerHTML='';
+    document.getElementById("gul_kule3").innerHTML='';
+    document.getElementById("gul_kule4").innerHTML='';
+    document.getElementById("gul_kule5").innerHTML='';
+    document.getElementById("gul_kule6").innerHTML='';
+    document.getElementById("gul_kule7").innerHTML='';
+    document.getElementById("gul_kule8").innerHTML='';
+}
+function hjerte_inn() {
+    console.log("vis hjerte");    
+	document.getElementById("gul_kule3").innerHTML='';
+	document.getElementById("rod_kule6").innerHTML='';
+    document.getElementById("hjerte").innerHTML='<img src="./hjerte.png" style="height: 120px;"></img>';
+}
+function hjerte_ut() {
+    console.log("vis hjerte");
+    document.getElementById("hjerte").innerHTML='';
+}
+function lys_inn() {
+    console.log("vis lys");
+    document.getElementById("lys").innerHTML='<img src="./lys2.gif" style="height: 75px;"></img>';
+}
+function lys_ut() {
+    console.log("vis lys");
+    document.getElementById("lys").innerHTML='';
+}
+function gaver_inn() {
+    console.log("vis gaver");
+    document.getElementById("gavepapir").innerHTML='';
+    document.getElementById("leke1").innerHTML='';
+    document.getElementById("leke2").innerHTML='';
+    document.getElementById("leke3").innerHTML='';
+    document.getElementById("leke4").innerHTML='';
+    document.getElementById("leke5").innerHTML='';
+    document.getElementById("gaver1").innerHTML='<img src="./gaver1.png" style="height: 95px;"></img>';
+    document.getElementById("gaver2").innerHTML='<img src="./gaver2.png" style="height: 95px;"></img>';
+}
+function gaver_ut() {
+    console.log("vis gaver");
+    document.getElementById("gaver1").innerHTML='';
+    document.getElementById("gaver2").innerHTML='';
+    document.getElementById("gavepapir").innerHTML='';
+    document.getElementById("leke1").innerHTML='';
+    document.getElementById("leke2").innerHTML='';
+    document.getElementById("leke3").innerHTML='';
+    document.getElementById("leke4").innerHTML='';
+    document.getElementById("leke5").innerHTML='';
+}
+function åpne_gaver() {
+    console.log("åpne gaver");
+    document.getElementById("gaver1").innerHTML='';
+    document.getElementById("gaver2").innerHTML='';
+    document.getElementById("gavepapir").innerHTML='<img src="./gavepapir.png" style="height: 130px;"></img>';
+    document.getElementById("leke1").innerHTML='<img src="./leke1.png" style="height: 100px;"></img>';
+    document.getElementById("leke2").innerHTML='<img src="./leke2.png" style="height: 100px;"></img>';
+    document.getElementById("leke3").innerHTML='<img src="./leke3.png" style="height: 95px;"></img>';
+    document.getElementById("leke4").innerHTML='<img src="./leke4.png" style="height: 110px;"></img>';
+    document.getElementById("leke5").innerHTML='<img src="./leke5.png" style="height: 160px;"></img>';
+}
+function reset() {
+    console.log("fjern alt");
+    document.getElementById("rod_kule1").innerHTML='';
+    document.getElementById("rod_kule2").innerHTML='';
+    document.getElementById("rod_kule3").innerHTML='';
+    document.getElementById("rod_kule4").innerHTML='';
+    document.getElementById("rod_kule5").innerHTML='';
+    document.getElementById("rod_kule6").innerHTML='';
+    document.getElementById("rod_kule7").innerHTML='';
+    document.getElementById("rod_kule8").innerHTML='';
+    document.getElementById("gul_kule1").innerHTML='';
+    document.getElementById("gul_kule2").innerHTML='';
+    document.getElementById("gul_kule3").innerHTML='';
+    document.getElementById("gul_kule4").innerHTML='';
+    document.getElementById("gul_kule5").innerHTML='';
+    document.getElementById("gul_kule6").innerHTML='';
+    document.getElementById("gul_kule7").innerHTML='';
+    document.getElementById("gul_kule8").innerHTML='';
+    document.getElementById("hjerte").innerHTML='';
+    document.getElementById("lys").innerHTML='';
+    document.getElementById("gaver1").innerHTML='';
+    document.getElementById("gaver2").innerHTML='';
+    document.getElementById("gavepapir").innerHTML='';
+    document.getElementById("leke1").innerHTML='';
+    document.getElementById("leke2").innerHTML='';
+    document.getElementById("leke3").innerHTML='';
+    document.getElementById("leke4").innerHTML='';
+    document.getElementById("leke5").innerHTML='';
+}
+</script>
+</head>
+<body>
+<a href="./../../assignmentsT1_140IOl.html"><img src="./../backbuttonW.png" id="BackButton"></img></a>
+
+<center>
+<h1 id="title">JULETRE</h1>
+
+
+<!--Bilder-->
+<img src="./juletre.jpg" id="juletre">
+
+<div id="rod_kule1"></div><div id="rod_kule2"></div>
+<div id="rod_kule3"></div><div id="rod_kule4"></div>
+<div id="rod_kule5"></div><div id="rod_kule6"></div>
+<div id="rod_kule7"></div><div id="rod_kule8"></div>
+
+<div id="gul_kule1"></div><div id="gul_kule2"></div>
+<div id="gul_kule3"></div><div id="gul_kule4"></div>
+<div id="gul_kule5"></div><div id="gul_kule6"></div>
+<div id="gul_kule7"></div><div id="gul_kule8"></div>
+
+<div id="hjerte"></div>
+<div id="lys"></div>
+
+<div id="gaver1"></div><div id="gaver2"></div>
+
+<div id="gavepapir"></div>
+<div id="leke1"></div><div id="leke2"></div>
+<div id="leke3"></div><div id="leke4"></div>
+<div id="leke5"></div>
+
+
+<!--Vis Bilder-->
+<button class="btnL1" onclick="rod_kule_inn()">Vis røde kuler</button>
+<button class="btnL2" onclick="gul_kule_inn()">Vis gule kuler</button>
+<button class="btnL3" onclick="hjerte_inn()">Vis hjerte</button>
+<button class="btnL4" onclick="lys_inn()">Vis julelys</button>
+<button class="btnL5" onclick="gaver_inn()">Vis gavepakker</button>
+<button class="btnL6" onclick="åpne_gaver()">Vis gaver</button>
+
+
+<!--Fjern Bilder-->
+<button class="btnR1" onclick="rod_kule_ut()">Fjern røde kuler</button>
+<button class="btnR2" onclick="gul_kule_ut()">Fjern gule kuler</button>
+<button class="btnR3" onclick="hjerte_ut()">Fjern hjerte</button>
+<button class="btnR4" onclick="lys_ut()">Fjern julelys</button>
+<button class="btnR5" onclick="gaver_ut()">Fjern gaver/pakker</button>
+<button class="btnR6" onclick="reset()">Fjern alt</button>
+
+</center>
+</body>
+</html>

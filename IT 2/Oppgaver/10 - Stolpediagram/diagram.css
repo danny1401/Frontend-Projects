@@ -1,0 +1,318 @@
+body {
+	font-family: 'Lexend Deca', sans-serif;
+}
+em { margin-right: 20px; }
+#title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 26px 0;
+	color: white;
+	background-color: #202020;
+	border-bottom: 4px solid black;
+	font-weight: bold;
+	font-size: 45px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1;
+}
+
+td { text-align: center; }
+
+#BackButton {
+	position: absolute;
+	top: 23px;
+	left: 18px;
+	height: 63px; 	
+	width: 65px;
+	z-index: 2;
+}
+
+/*-------------------- INFO -----------------------------------*/
+#titleI {
+	position: absolute;
+	top: 132px;
+	left: 50px;
+	width: 550px;
+	padding: 15 20;
+	background-color: lightgrey;
+	border: 2px solid black;
+	border-bottom: none;
+}
+#info {
+	position: absolute;
+	top: 222px;
+	left: 50px;
+	width: 580px;
+	height: 354px;
+	padding: 0 5;
+	border: 2px solid black;
+	font-size: 18px;
+}
+/*-------------------- FORKORTELSER -----------------------------------*/
+#horizontal {
+	position: absolute;
+	top: 630px;
+	left: -4px;
+	width: 100.3%;
+	border-top: 4px solid black;
+}
+#titleF {
+	position: relative;
+	top: 490px;
+	left: 0;
+	right: 0; 
+	width: 450px;
+	padding: 10 0;
+	color: white;
+	background-color: grey;
+	border: 3px solid black;
+	border-radius: 10px;
+	font-size: 40px;
+}
+
+#feltN {
+	width: 250px;
+	padding: 13px 0;
+	color: white;
+	background-color: grey;
+	border: 2px solid black;
+	font-size: 18px;
+	font-weight: bold;
+}
+#feltF {
+	width: 100px;
+	padding: 13px 0;
+	color: white;
+	background-color: grey;
+	border: 2px solid black;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/*-------------------- TOTAL -----------------------------------*/
+#titleSUM {
+	position: absolute;
+	top: 132px;
+	right: 50px;
+	width: 550px;
+	padding: 15 20;
+	background-color: lightgrey;
+	border: 2px solid black;
+	border-bottom: none;
+}
+#feltSUM { position:absolute; top: 222px; right:50px; border:2px black solid;}
+#boksSUM {
+	position: absolute;
+	top: 519px;
+	right: 50px;
+	height: 40px;
+	width: 550px;
+	padding: 10 20;
+	background-color: lightgrey;
+	border: 2px solid black;
+	border-top: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+#reising { position:absolute; top:20px; left:67px; }
+#transfer { position:absolute; top:20px; left:256px; }
+#sum { position:absolute; top:20px; right:80px; }
+
+.chartSUM {
+    display: flex;
+    width: 586px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.chartSUM > td {
+	position: relative;
+	padding: 5 4.7;
+	padding-top: 15;
+	margin: 0 20;
+	color: white;
+    background-color: #33adff;
+	border: 2px solid black;
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: 1px 1px black;
+    flex-grow: 1;
+}
+
+/*-------------------- IFRAME -----------------------------------*/
+iframe {
+	position: absolute;
+	top: 1180px;
+	left: 0;
+	height: 622px;
+	width: 100%;
+	border: none;
+	border-top: 4px solid black;
+}
+#knapper {
+	position: fixed;
+	top: 24px;
+	left: 0%;
+	right: 0%;
+}
+button {
+	width: 200px;
+	padding: 10 10;
+	margin: 0 40;
+	color: white;
+	background-color: #404040;
+	border: 3px solid black;
+	border-radius: 10px;
+	font-size: 19px;
+	font-weight: bold;
+}
+#knapp {
+	position: absolute;
+	top: 24px;
+	left: 2988px;
+}
+.title {
+	position: absolute;
+	width: 1094px;
+	padding: 15px 0;
+	color: white;
+	background-color: #303030;
+	border: 2px solid black;
+	border-bottom: none;
+}
+#title1 { top: 80px; left: 9.35%; }
+#title2 { top: 80px; left: 100%; }
+#title3 { top: 80px; left: 191%; }
+
+#felt1 { position: absolute; top: 170px; left: 9.35%; }
+#felt2 { position: absolute; top: 170px; left: 100%; }
+#felt3 { position: absolute; top: 170px; left: 191%; }
+
+#boks1 { top: 532px; left: 9.35%;}
+#boks2 { top: 532px; left: 100%; }
+#boks3 { top: 532px; left: 191%; }
+
+.boks {
+	position: absolute;
+	height: 50px;
+	width: 1094px;
+	color: white;
+	background-color: #303030;
+	border: 2px solid black;
+	border-top: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#alf1 { position:absolute;  top:15px;  left:20px; }
+#bdu1 { position:absolute;  top:15px;  left:79px; }
+#bgo1 { position:absolute;  top:15px;  left:142px; }
+#boo1 { position:absolute;  top:15px;  left:211px; }
+#bnn1 { position:absolute;  top:15px;  left:272px; }
+#hft1 { position:absolute;  top:15px;  left:326px; }
+#eve1 { position:absolute;  top:15px;  left:383px; }
+#kkn1 { position:absolute;  top:15px;  left:442px; }
+#osy1 { position:absolute;  top:15px;  left:498px; }
+#osl1 { position:absolute;  top:15px;  left:561px; }
+#sog1 { position:absolute;  top:15px;  left:620px; }
+#svg1 { position:absolute;  top:15px;  left:682px; }
+#lyr1 { position:absolute;  top:15px;  right:312px; }
+#svj1 { position:absolute;  top:15px;  right:257px; }
+#tos1 { position:absolute;  top:15px;  right:194px; }
+#trd1 { position:absolute;  top:15px;  right:125px; }
+#vds1 { position:absolute;  top:15px;  right:64px; }
+#vaw1 { position:absolute;  top:15px;  right:11px; }
+
+#alf2 { position:absolute;  top:15px;  left:20px; }
+#bdu2 { position:absolute;  top:15px;  left:74px; }
+#bgo2 { position:absolute;  top:15px;  left:136px; }
+#boo2 { position:absolute;  top:15px;  left:203px; }
+#bnn2 { position:absolute;  top:15px;  left:267px; }
+#hft2 { position:absolute;  top:15px;  left:324px; }
+#eve2 { position:absolute;  top:15px;  left:376px; }
+#kkn2 { position:absolute;  top:15px;  left:430px; }
+#osy2 { position:absolute;  top:15px;  left:485px; }
+#osl2 { position:absolute;  top:15px;  left:549px; }
+#sog2 { position:absolute;  top:15px;  left:611px }
+#svg2 { position:absolute;  top:15px;  left:668px; }
+#lyr2 { position:absolute;  top:15px;  right:332px; }
+#svj2 { position:absolute;  top:15px;  right:272px; }
+#tos2 { position:absolute;  top:15px;  right:206px; }
+#trd2 { position:absolute;  top:15px;  right:139px; }
+#vds2 { position:absolute;  top:15px;  right:76px; }
+#vaw2 { position:absolute;  top:15px;  right:17px; }
+
+#alf3 { position:absolute;  top:15px;  left:20px; }
+#bdu3 { position:absolute;  top:15px;  left:77px; }
+#bgo3 { position:absolute;  top:15px;  left:141px; }
+#boo3 { position:absolute;  top:15px;  left:209px; }
+#bnn3 { position:absolute;  top:15px;  left:271px; }
+#hft3 { position:absolute;  top:15px;  left:325px; }
+#eve3 { position:absolute;  top:15px;  left:380px; }
+#kkn3 { position:absolute;  top:15px;  left:440px; }
+#osy3 { position:absolute;  top:15px;  left:496px; }
+#osl3 { position:absolute;  top:15px;  left:560px; }
+#sog3 { position:absolute;  top:15px;  left:621px }
+#svg3 { position:absolute;  top:15px;  left:682px; }
+#lyr3 { position:absolute;  top:15px;  right:311px; }
+#svj3 { position:absolute;  top:15px;  right:255px; }
+#tos3 { position:absolute;  top:15px;  right:193px; }
+#trd3 { position:absolute;  top:15px;  right:125px; }
+#vds3 { position:absolute;  top:15px;  right:63px; }
+#vaw3 { position:absolute;  top:15px;  right:11px; }
+
+.chart1 {
+	position: relative;
+    display: flex;
+    width: 1060px;
+	padding-bottom: 5px;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.chart1 > td {
+	position: relative;
+	padding: 4.85;
+	padding-bottom: 20;
+	margin: 0 4;
+    color: white;
+    background-color: #007acc;
+	font-size: 14px;
+    flex-grow: 1;
+}
+.chart2 {
+    display: flex;
+    width: 1060px;
+	padding-bottom: 5px;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.chart2 > td {
+	position: relative;
+    background-color: blue;
+	padding: 5 8.1;
+	padding-bottom: 20;
+	margin: 0 4;
+    flex-grow: 1;
+    color: white;
+	font-size: 14px;
+}
+.chart3 {
+    display: flex;
+    width: 1060px;
+	padding-bottom: 5px;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.chart3 > td {
+	position: relative;
+    background-color: midnightblue;
+	padding: 5 4.7;
+	padding-bottom: 20;
+	margin: 0 4;
+    flex-grow: 1;
+    color: white;
+	font-size: 14px;
+}
