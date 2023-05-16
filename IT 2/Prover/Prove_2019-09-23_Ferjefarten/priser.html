@@ -1,0 +1,296 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="./style.css" rel="stylesheet" type="text/css" />
+	<title>Ferjefarten Kubenvika</title>
+
+<script>
+function beregnfunction(utregning) {
+
+var varVoksen = utregning.voksen.value.replace(",",".");
+var varBarn = utregning.barn.value.replace(",",".");
+var varBil = utregning.bil.value.replace(",",".");
+var varMotorSykkel = utregning.motorsykkel.value.replace(",",".");
+var varLastebil_L = utregning.lastebil_L.value.replace(",",".");
+var varLastebil_S = utregning.lastebil_S.value.replace(",",".");
+var varBil_Tilhenger = utregning.bil_tilhenger.value.replace(",",".");
+var varBil_Vogn = utregning.bil_vogn.value.replace(",",".");
+
+var pris1 = Number(varVoksen)*32;
+var pris2 = Number(varBarn)*16;
+var pris3 = Number(varBil)*84;
+var pris8 = Number(varMotorSykkel)*54;
+var pris4 = Number(varLastebil_L)*205;
+var pris5 = Number(varLastebil_S)*240;
+var pris6 = Number(varBil_Tilhenger)*168;
+var pris7 = Number(varBil_Vogn)*252;
+
+if(pris1 >= 0) {
+var sum = pris1 + pris2 + pris3 + pris4 + pris5 + pris6 + pris7 + pris8;
+alert("Totalprisen vil bli " + sum + " kroner.");
+}
+
+}
+
+</script>
+<style>
+section {
+	position:absolute;
+	top: 625px;
+	left:0;
+	height: 925px;
+	width: 100%;
+	border-top: 4px solid black;
+}
+#title1 {
+	font-size: 35px;
+}
+td {
+	position: relative;
+	padding: 25px 24px;
+	background: lightgrey;
+	font-size: 18px;
+	text-align: center;
+}
+select {
+	border: 1px solid black;
+	height: 30px;
+	padding-top: 1px;
+	padding-left: 10px;
+	font-size: 18px;
+	margin: 0 20px;
+	outline: none;
+}
+#felt1 {
+	position: absolute;
+	top: 475px;
+	left: 280px;
+	height: 80px;
+	width: 310px;
+	padding: 30px 30px;
+	background-color: lightgrey;
+	border: 2px solid black;
+	font-size: 18px;
+	text-align: right;
+}
+#felt2 {
+	position: absolute;
+	top: 660px;
+	left: 280px;
+	height: 80px;
+	width: 310px;
+	padding: 30px 30px;
+	background-color: lightgrey;
+	border: 2px solid black;
+	font-size: 18px;
+	text-align: right;	
+}
+#felt3 {
+	position: absolute;
+	top: 475px;
+	right: 280px;
+	height: 80px;
+	width: 310px;
+	padding: 30px 30px;
+	background-color: lightgrey;
+	border: 2px solid black;
+	font-size: 18px;
+	text-align: left;	
+}
+#felt4 {
+	position: absolute;
+	top: 660px;
+	right: 280px;
+	height: 80px;
+	width: 310px;
+	padding: 30px 30px;
+	background-color: lightgrey;
+	border: 2px solid black;
+	font-size: 18px;
+	text-align: left;		
+}
+#button {
+	position: relative;
+	top: 375px;
+	height: 50px;
+	width: 150px;
+	background-color: lightgrey;
+	border: 2px solid black;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0 18px;
+	outline: none;
+}
+</style>
+</head>
+<body>
+<center>
+<img src="./bilder/Holm_ferjeleie.jpg" id="mainbilde"></img>
+<h1 id="maintitle">Priser</h1>
+
+<div class="fixed" id="bar">
+	<div class="buttons">
+		<a href="./index.html" class="meny">Kubenvika</a>
+		<a href="./overfartstid.html" class="meny">Overfartstider</a>
+		<a href="./priser.html#info" class="meny">Priser</a>
+		<a href="./ferjer.html" class="meny">Våre ferjer</a>
+	</div>
+	<a href="./index.html"><img src="./bilder/boat.png" id="logo"></img></a>
+	<a href="./../../ProverT1_140IOl.html" id="index">INDEX</a>
+</div>
+<section>
+<em id="info" style="position:absolute;top:-70px;left:-5;">.</em>
+<br><br>
+
+<h1 id="title1">Billettpriser</h1>
+<h3>Maks kapisitet av kjøretøy ombord på båten er 60 biler.</h3>
+<table style="background:black;">
+<tr>
+	<td><b><i>Kunde</td><td>Barn</td><td>Voksen</td><td>Bil</td><td>Motorsykkel</td>
+	<td>Lastebil (Liten)</td><td>Lastebil (Stor)</td><td>Bil + Tilhenger</td><td>Bil + Vogn</td>
+</tr>
+<tr>
+	<td><b><i>Pris</td><td>16 kr</td><td>32 kr</td><td>84 kr</td><td>54 kr</td>
+	<td>205 kr</td><td>240 kr</td><td>168 kr</td><td>252 kr</td>
+</tr>
+</table>
+<br><br><br>
+
+<h1 id="title1">Beregn din pris</h1>
+<form name="utregning">
+
+<div id="felt1">
+<b>Antall voksene:</b>
+<select name="voksen">
+	<option value="">0</option>
+	<option value="1">1</option> 
+	<option value="2">2</option>
+	<option value="3">3</option> 
+	<option value="4">4</option>
+	<option value="5">5</option> 
+	<option value="6">6</option>
+	<option value="7">7</option> 
+	<option value="8">8</option>
+	<option value="9">9</option> 
+	<option value="10">10</option>
+</select>
+<br><br>
+<b>Antall barn:</b>
+<select name="barn">
+	<option value="">0</option>
+	<option value="1">1</option> 
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option> 
+	<option value="6">6</option>
+	<option value="7">7</option> 
+	<option value="8">8</option>
+	<option value="9">9</option> 
+	<option value="10">10</option>
+</select>
+</div>
+
+<div id="felt2">
+<b>Antall biler:</b>
+<select name="bil">
+	<option value="">0</option>
+	<option value="1">1</option> 
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option> 
+	<option value="6">6</option>
+	<option value="7">7</option> 
+	<option value="8">8</option>
+	<option value="9">9</option> 
+	<option value="10">10</option>
+</select>
+<br><br>
+<b>Antall motorsykkeler:</b>
+<select name="motorsykkel">
+	<option value="">0</option>
+	<option value="1">1</option> 
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option> 
+	<option value="6">6</option>
+	<option value="7">7</option> 
+	<option value="8">8</option>
+	<option value="9">9</option> 
+	<option value="10">10</option>
+</select>
+</div>
+
+<div id="felt3">
+<select name="lastebil_L">
+	<option value="">0</option>
+	<option value="1">1</option> 
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option> 
+	<option value="6">6</option>
+	<option value="7">7</option> 
+	<option value="8">8</option>
+	<option value="9">9</option> 
+	<option value="10">10</option>
+</select>
+<b>Antall lastebiler (Liten):</b>
+<br><br>
+<select name="lastebil_S">
+	<option value="">0</option>
+	<option value="1">1</option> 
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option> 
+	<option value="6">6</option>
+	<option value="7">7</option> 
+	<option value="8">8</option>
+	<option value="9">9</option> 
+	<option value="10">10</option>
+</select>
+<b>Antall lastebiler (Stor):</b>
+</div>
+
+<div id="felt4">
+<select name="bil_tilhenger">
+	<option value="">0</option>
+	<option value="1">1</option> 
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option> 
+	<option value="6">6</option>
+	<option value="7">7</option> 
+	<option value="8">8</option>
+	<option value="9">9</option> 
+	<option value="10">10</option>
+</select>
+<b>Antall biler + Tilhenger:</b>
+<br><br>  
+<select name="bil_vogn">
+	<option value="">0</option>
+	<option value="1">1</option> 
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option> 
+	<option value="6">6</option>
+	<option value="7">7</option> 
+	<option value="8">8</option>
+	<option value="9">9</option> 
+	<option value="10">10</option>
+</select>
+<b>Antall biler + Vogn:</b>
+</div>
+
+<input id="button" type="reset" name="Reset" value="Reset">
+<input id="button" type="button" name="beregn" value="Beregn" onClick="beregnfunction(utregning)">
+</form>
+</section>
+</center>
+</body>
+</html>

@@ -1,0 +1,90 @@
+body {
+	font-family: HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+strong {
+	letter-spacing: 10;
+}
+#index {
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	padding: 4px 5px;
+	padding-top: 5px;
+	color: white;
+	background-color: #303030;
+	border: 2px solid white;
+	font-weight: 600;
+	letter-spacing: 2;
+	text-decoration: none;
+}
+#mainbilde {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 625px;
+}
+#maintitle {
+	position: absolute;
+	top: 240px;
+	left: 0;
+	width: 100%;
+	padding: 30px 0;
+	color: white;
+	background-color: #202020;
+	border-top: 4px solid black;
+	border-bottom: 4px solid black;
+	font-size: 45px;
+	letter-spacing: 3;
+}
+#bar {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	margin: 0;
+	padding: 0;
+	height: 80px;
+	width: 100%;
+	background-color: #202020;
+	border-bottom: 4px solid black;
+	z-index: 2;
+}
+.buttons {
+	position: relative;
+	top: 1;
+	right: 320px;
+	margin-top: 30px;
+}
+.buttons .meny {
+    color: white;
+    padding: 10px 19px;
+	margin-left: 30px;
+	background-color: #303030;
+	border: 2px solid white;
+	border-radius: 7px;
+	font-size: 20px;
+	font-weight: 600;
+    text-align: center;
+    text-decoration: none; 
+	z-index: 2;
+}
+.meny:hover {
+	color: white;
+	background-color: #404040;
+	border: 2px solid white;
+	border-radius: 7px;
+}
+#logo {
+	position: fixed;
+	top: 4px;
+	height: 65px;
+	width: 105px;
+	z-index: 2;
+
+    animation:eksempel 10s infinite;
+    animation-direction:alternate;
+}
+    @-moz-keyframes eksempel { from{right:480px;} to{right:150px;} }
+    @-webkit-keyframes eksempel { from{right:480px;} to{right:150px;}}
+	@keyframes eksempel{from{right:480px;} to{right:150px;}}
+}
