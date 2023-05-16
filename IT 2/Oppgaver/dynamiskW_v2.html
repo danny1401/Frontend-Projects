@@ -1,0 +1,36 @@
+<html>
+<head>
+body {
+    background-repeat: no-repeat;
+    background-color: lightgrey;
+    background-size: 100% 100%;
+}
+</head>
+<body>
+<h1>Eksempel 156, skifte av bakgrunn.</h1>
+<script>
+
+var datotid = new Date();
+var hour = datotid.getHours(); 
+
+function bilde() {
+if (hour >= 8 && hour <= 11) {
+document.body.style.backgroundImage = "url('./bilde1.jpg')";
+}
+else if (hour >= 12 && hour <= 17) {
+    document.body.style.backgroundImage = "url('./bilde2.jpg')";   
+    } 
+else if (hour >= 18 && hour <= 21) {
+    document.body.style.backgroundImage = "url('./bilde3.jpg')";   
+    }     
+else if (hour >= 22 && hour <= 7) {
+    document.body.style.backgroundImage = "url('./bilde4.jpg')";   
+    }     
+}
+
+bilde(); //Script aktiveres her. 
+
+</script>
+
+</body>
+</html>

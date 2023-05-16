@@ -1,0 +1,62 @@
+<html>
+<head>
+
+<script>
+
+function utregn(skjema) {
+
+var pris = skjema.pris.value.replace(",",".");
+
+var valg = skjema.valg.value.replace(",",".");
+
+const MVA1 = 1.25;
+const MVA2 = 1.15;
+
+
+if (valg == 1) {
+    var totalpris = pris * MVA1;
+    skjema.totalpris.value = totalpris.toString().replace(".",",");
+    //pris for aa spise inne.
+}
+
+else if (valg == 2) { 
+    var totalpris = pris * MVA2;
+    skjema.totalpris.value = totalpris.toString().replace(".",",");
+    //pris for aa ta med maten
+}
+}
+
+</script>
+
+</head>
+<body>
+
+<form name = "skjema">
+
+<!-- Legg inn tall --->
+Skriv inn bruttopris for maten
+
+<p>Pris<input type = "text" name = "pris" size= "5" value ="0"> </p>
+<p>Velg spisested
+    <select name="valg">
+        <option value="1">Spise Inne</option>
+        <option value="2">Spise Ute</option>
+    </select>
+    </p>
+
+<input type = "button" name ="beregn" value = "Beregn" onClick="utregn(skjema)">
+<p>
+
+<!--- Se svar --->
+Matpris blir: 
+
+<input type = "text" name="totalpris" size="5" value = "0,0">
+
+<!---Nullstill knapp --->
+
+<input type = "reset" name= "nullstill" value = "nullstill">
+
+</form>
+
+</body>
+</html>
