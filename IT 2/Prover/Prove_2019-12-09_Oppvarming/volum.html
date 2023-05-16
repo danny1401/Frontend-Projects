@@ -1,0 +1,68 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./style.css">	
+	<title>Oppvarming av hus</title>
+
+<script>
+/* VOLUM */
+function beregning(volum) {
+	var Lengde = volum.Lengde.value.replace(",",".");
+	var Bredde = volum.Bredde.value.replace(",",".");
+	var Hoyde = volum.Hoyde.value.replace(",",".");
+
+if (Lengde > 0 && Bredde > 0 && Hoyde > 0) {
+	var Areal = Lengde * Bredde;
+	var Volum = Areal * Hoyde;
+
+	document.getElementById("volumR").innerHTML = "<p>Ut i fra opplysningene, har vi beregnet arealet og volumet av rommet.<h4>Areal = "+Areal+"m&#178;</h4><h4>Volum = "+Volum+"m&#179;</h4>";
+}
+else { alert( "Du må skrive et positivt tall." ); }
+}
+function nullstill(volum) {
+	document.getElementById("volumR").innerHTML = '';
+}
+</script>
+</head>
+<body>
+<center>
+<script language="JavaScript" src="./meny.js"></script>
+
+<div id="info">
+<center><h1 style="position:relative;top:-6;font-size:35px;margin-bottom:10;">Info</h1></center>
+Her kan du beregne volum ved å oppgi lengden, 
+bredden og høyden i meter. Volumet vil være 
+oppgitt i kubikkmeter.
+<p>
+For å måle volum av et rom i form av en prisme, 
+så trenger vi å gange sammen lengen, bredden og <br>høyden til rommet.
+<p>
+Lengde &#215; Bredde = Areal
+<br> 
+Areal &#215; Høyde = Volum
+</div>
+
+<form name="volum">
+<div id="boksV">
+<center><h1 style="font-size:35px;"><i>Volum</i><em> </em>av rom</h1></center>
+<h2 class="titleV">Lengde</h2>
+<input id="feltV" class="felt" type="text" name="Lengde" placeholder="0">
+<p>
+<h2 class="titleV">Bredde</h2>
+<input id="feltV" class="felt" type="text" name="Bredde" placeholder="0">
+<p>
+<h2 class="titleV">Høyde</h2>
+<input id="feltV" class="felt" type="text" name="Hoyde" placeholder="0">
+<input id="submitV" class="knapp" type="button" value="Beregn" name="beregn" onClick="beregning(volum)">
+</div>
+
+<div id="resultatV">
+<center><h1 style="position:relative;top:-7;font-size:35px;margin-bottom:10;">Resultater</h1></center>
+<p><div id="volumR"></div>
+<input id="resetV" class="knapp" type="reset" name="Nullstill" value="Nullstill" onclick="nullstill(volum)">
+</div>
+</form>
+
+</center>
+</body>
+</html>

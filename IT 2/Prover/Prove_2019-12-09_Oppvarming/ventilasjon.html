@@ -1,0 +1,86 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./style.css">	
+	<title>Oppvarming av hus</title>
+
+<script>
+/* VENTILASJON */
+function beregning(ventilasjon) {
+	var Lengde = ventilasjon.Lengde.value.replace(",",".");
+	var Bredde = ventilasjon.Bredde.value.replace(",",".");
+	var Hoyde = ventilasjon.Hoyde.value.replace(",",".");
+	var T_Start = ventilasjon.TemperaturStart.value.replace(",",".");
+	var T_Slutt = ventilasjon.TemperaturSlutt.value.replace(",",".");
+	var Uteluft = ventilasjon.TemperaturUteLuft.value.replace(",",".");
+	var VentilasjonVolum = ventilasjon.VentilasjonV.value.replace(",",".");
+
+if (Lengde > 0 && Bredde > 0 && Hoyde > 0) {
+	var Areal = Lengde * Bredde;
+	var Volum = Areal * Hoyde;
+
+	var Energi = 0.35;
+	var T_Forskjell = T_Slutt - T_Start;
+	
+	var VentVolum = VentilasjonVolum / 100;
+	var T_Oppvarming = Volum * Energi * T_Forskjell;
+	var Volum_og_Vent = ((Volum * VentVolum) * 1);
+	var EnergiBehov = ((Volum / VentVolum) * 1) * Energi * T_Forskjell;
+	
+	document.getElementById("oppvarmingR").innerHTML = "Ut i fra opplysningene, har vi beregnet hvor mye energi som trengs for å varme opp rommet hver time.<p>Rommet har en volum på "+Volum+" m&#179 og temperaturen for luften ute er "+Uteluft+".<p>Rommet starter på "+T_Start+" grader og den ønskede temperaturen i rommet er på "+T_Slutt+" grader.<p>Det trengs det "+T_Forskjell+" grader for å varme opp rommet som tilsvarer "+T_Oppvarming+" W.<p>I ventilasjonen skiftes det ut "+Volum_og_Vent+" m&#179 luft hver time.<p>Energibehovet for å varme opp rommet hver time er "+EnergiBehov+" W.";
+}
+else { alert( "Du må skrive et positivt tall." ); }
+}
+function nullstill(ventilasjon) {
+	document.getElementById("oppvarmingR").innerHTML = '';
+}
+</script>
+</head>
+<body>
+<center>
+<script language="JavaScript" src="./meny.js"></script>
+
+<form name="ventilasjon">
+<div id="boksV3">
+<center><h1 style="font-size:35px;"><i>Volum</i><em> </em>av rom</h1></center>
+<h2 class="titleO">Lengde</h2>
+<input id="feltO" class="felt" type="text" name="Lengde" placeholder="0">
+<p>
+<h2 class="titleO">Bredde</h2>
+<input id="feltO" class="felt" type="text" name="Bredde" placeholder="0">
+<p>
+<h2 class="titleO">Høyde</h2>
+<input id="feltO" class="felt" type="text" name="Hoyde" placeholder="0">
+</div>
+
+<div id="boksO2">
+<center><h1 style="position:relative;top:-7;font-size:35px;margin-bottom:10;"><i>Oppvarming</i> av rom</h1></center>
+<h2 style="position:relative;top:5px;margin-bottom:0;">Temperatur</h2>
+<h3 id="titleTSV1">Start</h3>
+<input id="feltTSV1" class="felt" type="text" name="TemperaturStart" placeholder="0">
+<p>
+<h3 id="titleTSV2">Slutt</h3>
+<input id="feltTSV2" class="felt" type="text" name="TemperaturSlutt" placeholder="0">	
+</div>
+
+<div id="boksVent">
+<center><h1 style="position:relative;top:-7;font-size:35px;margin-bottom:10;"><i>Ventilasjon</i> av huset</h1></center>
+<h2 id="titleVent1">Temperatur for uteluft</h2>
+<input id="feltVent1" class="felt" type="text" name="TemperaturUteLuft" placeholder="0">
+<p>
+<h2 id="titleVent2">Volum av ventilasjon (%)</h2>
+<input id="feltVent2" class="felt" type="text" name="VentilasjonV" placeholder="0">
+<br>
+<a href="#resetVent"><input id="submitVent" class="knapp" type="button" value="Beregn" name="beregn" onClick="beregning(ventilasjon)"></a>
+</div>
+
+<div id="resultatVent">
+<center><h1 style="font-size:35px;">Resultater</h1></center>
+<p><div id="oppvarmingR"></div>
+<input id="resetVent" class="knapp" type="reset" name="Nullstill" value="Nullstill" onclick="nullstill(ventilasjon)">
+</div>
+</form>
+
+</center>
+</body>
+</html>

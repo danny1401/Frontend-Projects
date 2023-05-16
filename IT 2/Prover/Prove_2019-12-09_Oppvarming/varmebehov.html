@@ -1,0 +1,80 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./style.css">	
+	<title>Oppvarming av hus</title>
+
+<script>
+/* VARMEBEHOV */
+function beregning(varmebehov) {
+	var Lengde = varmebehov.Lengde.value.replace(",",".");
+	var Bredde = varmebehov.Bredde.value.replace(",",".");
+	var Hoyde = varmebehov.Hoyde.value.replace(",",".");
+	var UteTemperatur = varmebehov.UteTemperatur.value.replace(",",".");
+	var RomVarme = varmebehov.RomVarme.value.replace(",",".");
+
+if (Lengde > 0 && Bredde > 0 && Hoyde > 0) {
+	var Areal = Lengde * Bredde;
+	var Volum = Areal * Hoyde;
+
+	var Energi = 0.35;
+	var LuftD = (Volum/2) * 24;
+	var LuftY = LuftD * 365;
+	var ForbrukD = LuftD * Energi * RomVarme;
+	var ForbrukY = LuftY * Energi * RomVarme;
+	
+	document.getElementById("oppvarmingR").innerHTML = "Ut i fra opplysningene, har vi beregnet det årlige forbruket for rommet.<p>Rommet har en volum på "+Volum+" m&#179, der romtemperaturen er på "+RomVarme+" grader og utetemperaturen er på "+UteTemperatur+" grader.<p>I et døgn vil det byttes ut "+LuftD+" m&#179 luft og oppvarmingen vil bruke "+ForbrukD+" Watt.<p>Den årlige luftutbyttingen vil være på "+LuftY+" m&#179, mens det årlige energiforbruket være på "+ForbrukY+" Watt.";
+}
+else { alert( "Du må skrive et positivt tall." ); }
+}
+function nullstill(varmebehov) {
+	document.getElementById("oppvarmingR").innerHTML = '';
+}
+</script>
+</head>
+<body>
+<center>
+<script language="JavaScript" src="./meny.js"></script>
+
+<div id="info">
+<center><h1 style="position:relative;top:-6;font-size:35px;margin-bottom:10;">Info</h1></center>
+Her kan du beregne den årlige luftutbyttingen og det årlige energiforbruket i et hus.
+<p>
+På denne siden kan du finne ut et døgns- eller et årsforbruk av luftutbytting.
+Ut i fra forbruket av luftutbyttingen kan du også finne<br>hvor mye energi du bruker
+i et<br>døgn eller i et års.
+</div>
+
+<form name="varmebehov">
+<div id="boksV2">
+<center><h1 style="font-size:35px;"><i>Volum</i><em> </em>av rom</h1></center>
+<h2 class="titleO">Lengde</h2>
+<input id="feltO" class="felt" type="text" name="Lengde" placeholder="0">
+<p>
+<h2 class="titleO">Bredde</h2>
+<input id="feltO" class="felt" type="text" name="Bredde" placeholder="0">
+<p>
+<h2 class="titleO">Høyde</h2>
+<input id="feltO" class="felt" type="text" name="Hoyde" placeholder="0">
+</div>
+
+<div id="boksO">
+<center><h1 style="position:relative;top:-7;font-size:35px;margin-bottom:10;"><i>Varmebehov</i></h1></center>
+<h3 id="titleVB1">Utetemperatur (Årlig)</h3>
+<input id="feltVB1" class="felt" type="text" name="UteTemperatur" placeholder="0">
+<p>
+<h3 id="titleVB2">Romvarme</h3>
+<input id="feltVB2" class="felt" type="text" name="RomVarme" placeholder="0">
+<a href="#resetVB"><input id="submitVB" class="knapp" type="button" value="Beregn" name="beregn" onClick="beregning(varmebehov)"></a>
+</div>
+
+<div id="resultatVB">
+<center><h1 style="font-size:35px;">Resultater</h1></center>
+<p><div id="oppvarmingR"></div>
+<input id="resetVB" class="knapp" type="reset" name="Nullstill" value="Nullstill" onclick="nullstill(varmebehov)">
+</div>
+</form>
+
+</center>
+</body>
+</html>

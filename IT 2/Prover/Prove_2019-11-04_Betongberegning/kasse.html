@@ -1,0 +1,76 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./style.css">	
+	<title>Betongberegning</title>
+
+<script>
+/* KASSE */
+function beregnfunction(kasse) {
+	var LengdeK = kasse.LengdeK.value.replace(",",".");
+	var BreddeK = kasse.BreddeK.value.replace(",",".");
+	var HoydeK = kasse.HoydeK.value.replace(",",".");
+
+if (LengdeK > 0 && BreddeK > 0 && HoydeK > 0) {
+	var Pose = 12.5;
+	
+	var VolumK = LengdeK * BreddeK * HoydeK;
+	var LiterK = VolumK * 0.001;
+	var Sekk_K = LiterK/Pose;
+	var PrisK = Sekk_K * 69;
+	
+	var AvrundetLiterK = LiterK.toFixed(6);
+	var AvrundetSekk_K = Sekk_K.toFixed(6);
+	var AvrundetPrisK = PrisK.toFixed(6);
+
+	document.getElementById("volumR").innerHTML = "Ut i fra opplysningene, vil kassen ha volumet "+VolumK+".";
+	document.getElementById("literR").innerHTML = "Kassen fyller "+AvrundetLiterK+" liter av Betong Type B25.";
+	document.getElementById("sekk_R").innerHTML = "For å fylle kassen, trengs det "+AvrundetSekk_K+" liter av betongsekker.";
+	document.getElementById("prisR").innerHTML = "Totalprisen er "+AvrundetPrisK+" kr.";
+}
+else { alert( "Du må skrive et positivt tall." ); }
+}
+
+function nullstill(kasse) {
+    document.getElementById("volumR").innerHTML = '';
+    document.getElementById("literR").innerHTML = '';
+    document.getElementById("sekk_R").innerHTML = '';
+    document.getElementById("prisR").innerHTML = '';
+}
+</script>
+</head>
+<body>
+<center>
+<script language="JavaScript" src="./meny.js"></script>
+
+<a href="./kasse.html"><button class="knappKSP">Kasse</button></a>
+<a href="./sylinder.html"><button class="knappKSP">Sylinder</button></a>
+<a href="./prisme.html"><button class="knappKSP">Prisme</button></a>
+
+<form name="kasse">
+<div id="boksKSP">
+<center><h1 style="font-size:35px;">Beregning av <i>Kasse</i></h1></center>
+<h2 id="titleLK">Lengde</h2>
+<h2 id="titleBK">Bredde</h2>
+<h2 id="titleHK">Høyde</h2>
+
+<input id="feltLK" class="felt" type="text" name="LengdeK" placeholder="0">
+<input id="feltBK" class="felt" type="text" name="BreddeK" placeholder="0">
+<br>
+<input id="feltHK" class="felt" type="text" name="HoydeK" placeholder="0">
+<input id="submitK" class="knappKSP" type="button" value="Beregn" name="beregn" onClick="beregnfunction(kasse)">
+</div>
+
+<div id="resultatKSP">
+<center><h1 style="font-size:35px;">Resultater</h1></center>
+<p><div id="volumR"></div>
+<p><div id="literR"></div>
+<p><div id="sekk_R"></div>
+<p><div id="prisR"></div>
+<input id="resetKSP" class="knappKSP" type="reset" name="Nullstill" value="Nullstill" onclick="nullstill(kasse)">
+</div>
+</form>
+
+</center>
+</body>
+</html>

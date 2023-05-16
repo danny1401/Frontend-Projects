@@ -1,0 +1,366 @@
+body {font-family: HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;}
+strong { margin-left: 8px; }
+em { margin-left: 3px; }
+
+/* NAVBAR */
+#bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 90px;
+	width: 100%;
+	background: #404040;
+	border-bottom: 2px solid #060b14;
+	z-index: 2;
+}
+#navtitle {
+	position: fixed;
+	top: 0px;
+	left: 55px;
+	color: white;
+	font-size: 38px;
+	font-family: 'Lexend Deca', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1;
+	z-index: 2;
+}
+.navbtn {
+    padding: 10px 0;
+    padding-top: 11px;
+	color: white;
+	border: 1px solid white;
+	font-size: 18px;
+	font-weight: 600;
+    text-align: center;
+    text-decoration: none; 
+	text-transform: uppercase;
+	letter-spacing: 1.5;
+	z-index: 2;
+}
+#navbtn1:hover {	background-color:#008000; }
+#navbtn2:hover {	background-color: #2db300; }
+#navbtn3:hover {	background-color: #cccc00; }
+#navbtn4:hover {	background-color: #cc5200; }
+#navbtn5:hover {	background-color: #cc0000; }
+
+#navbtn1 {	position: fixed; top: 24px;	right:695px; width:90px;	background-color:#006600; }
+#navbtn2 {	position: fixed; top: 24px;	right:580px; width:100px;	background-color:#269900; }
+#navbtn3 {	position: fixed; top: 24px;	right:410px; width:155px;	background-color:#b3b300; }
+#navbtn4 {	position: fixed; top: 24px;	right:235px; width:160px;	background-color:#b34700; }
+#navbtn5 {	position: fixed; top: 24px;	right:60px;  width:160px;	background-color:#b30000; }
+
+
+/* HOME */
+#maintitle {
+	position: absolute;
+	top: 230px;
+	left: 0;
+	width: 100%;
+	padding: 30 0;
+	color: white;
+	background: linear-gradient(to right, #006600, #269900, #e6e600, #e65c00, #e60000);
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	font-size: 55px;
+	font-family: 'Lexend Deca', sans-serif;
+	text-shadow: 3px 2px black;
+	text-transform: uppercase;
+	letter-spacing: 1;
+}
+
+
+/* BEREGN */
+.felt {
+	width: 180px;
+	padding: 3px 0;
+	padding-top: 4px;
+	border: 1px solid black;
+	font-size: 18px;
+	text-align: center;
+	outline: none;
+}
+.knapp {
+	position: relative;
+	top: 120px;
+	width: 155px;
+	padding: 8 0;
+	margin: 0 15;
+	color: white;
+	background: #202020;
+	border: 2px solid black;
+	font-size: 24px;
+	font-family: 'Lexend Deca', sans-serif;
+	text-shadow: 2px 1px black;
+	outline: none;
+}
+#info {
+	position: absolute;
+	top: 140px;
+	left: 40px;
+	height: 435px;
+	width: 320px;
+	padding: 0 40;
+	background-color: #d4d4d4;
+	border: 2px solid black;
+	font-size: 19px;
+	text-align: left;
+	line-height: 1.4;
+}
+
+/* VOLUM */
+#boksV {	
+	position: absolute;
+	top: 140px;
+	left: 480px;
+	height: 435px;
+	width: 360px;
+	padding: 0 20;
+	background-color: #d4d4d4;
+	border: 2px solid black;
+	text-align: center;
+	line-height: 1.1;
+}
+#resultatV {	
+	position: absolute;
+	top: 140px;
+	right: 40px;
+	height: 435px;
+	width: 340px;
+	padding: 0 30;
+	background-color: #d4d4d4;
+	border: 2px solid black;
+	font-size: 19px;
+	text-align: center;
+	line-height: 1.5;
+}
+.titleV {
+	position: relative;
+	top: -5px;
+}
+#feltV {
+	position: relative;
+	top: -20px;
+}
+#volum { position:relative; 	top:0px; font-size:17.5px;}
+
+#submitV { 
+	position: relative;
+	top: 10px;
+	width: 250px;
+	padding: 6 0;
+	background-color: green; 
+	border: 2px solid black;
+	font-size: 25px;
+}
+#resetV { 
+	position: absolute;
+	top: 363px;
+	right: 60px;
+	width: 250px;
+	padding: 6 0;
+	background-color: red; 
+	border: 2px solid black;
+	font-size: 25px;
+}
+
+
+/* OPPVARMING */
+#boksV2 {	
+	position: absolute;
+	top: 140px;
+	left: 472px;
+	height: 435px;
+	width: 360px;
+	padding: 0 20;
+	background-color: #d4d4d4;
+	border: 2px solid black;
+	text-align: center;
+	line-height: 1.1;
+}
+#boksO {	
+	position: absolute;
+	top: 140px;
+	right: 40px;
+	height: 435px;
+	width: 340px;
+	padding: 0 30;
+	background-color: #d4d4d4;
+	border: 2px solid black;
+	font-size: 19px;
+	text-align: center;
+	line-height: 1.5;
+}
+#resultatO {	
+	position: relative;
+	top: 620px;
+	height: 365px;
+	width: 700px;
+	padding: 0 20;
+	margin-bottom: 45px;
+	background-color: #d4d4d4;
+	border: 2px solid black;
+	text-align: center;
+	line-height: 1.1;
+}
+.titleO {
+	position: relative;
+	top: 20px;
+}
+#feltO {
+	position: relative;
+	top: 10px;
+}
+#titleTS1 { position:relative;	top:-15px; }
+#titleTS2 { position:relative;	top:-35px; }
+
+#feltTS1 { position:relative;	top:-35px; }
+#feltTS2 { position:relative;	top:-55px; }
+
+#oppvarmingR { position:relative; 	top:0px; font-size:17.5px;}
+
+#submitO { 
+	position: relative;
+	top: -10px;
+	width: 250px;
+	padding: 6 0;
+	background-color: green; 
+	border: 2px solid black;
+	font-size: 25px;
+}
+#resetO { 
+	position: absolute;
+	top: 303px;
+	left: 230px;
+	width: 250px;
+	padding: 6 0;
+	background-color: red; 
+	border: 2px solid black;
+	font-size: 25px;
+}
+
+
+/* VENTILASJON */
+#boksV3 {	
+	position: absolute;
+	top: 140px;
+	left: 40px;
+	height: 435px;
+	width: 360px;
+	padding: 0 20;
+	background-color: #d4d4d4;
+	border: 2px solid black;
+	text-align: center;
+	line-height: 1.1;
+}
+#boksO2 {	
+	position: absolute;
+	top: 140px;
+	right: 472px;
+	height: 435px;
+	width: 340px;
+	padding: 0 30;
+	background-color: #d4d4d4;
+	border: 2px solid black;
+	font-size: 19px;
+	text-align: center;
+	line-height: 1.5;
+}
+#boksVent {	
+	position: absolute;
+	top: 140px;
+	right: 40px;
+	height: 435px;
+	width: 340px;
+	padding: 0 30;
+	background-color: #d4d4d4;
+	border: 2px solid black;
+	text-align: center;
+	line-height: 1.5;
+}
+#resultatVent {	
+	position: relative;
+	top: 620px;
+	height: 390px;
+	width: 900px;
+	padding: 0 20;
+	margin-bottom: 45px;
+	background-color: #d4d4d4;
+	border: 2px solid black;
+	text-align: center;
+	line-height: 1.1;
+}
+#feltO {
+	position: relative;
+	top: 10px;
+}
+#titleTSV1 { position:relative;	top:13px; }
+#titleTSV2 { position:relative;	top:10px; }
+#feltTSV1 { position:relative;	top:-3px; }
+#feltTSV2 { position:relative;	top:-7px; }
+
+#titleVent1 { position:relative;	top:10px; }
+#feltVent1 { position:relative;		top:-5px; }
+#titleVent2 { position:relative;	top:15px; }
+#feltVent2 { position:relative;		top:0px; }
+
+#oppvarmingR { position:relative; 	top:0px; font-size:17.5px;}
+
+#submitVent { 
+	position: relative;
+	top: 60px;
+	width: 250px;
+	padding: 6 0;
+	background-color: green; 
+	border: 2px solid black;
+	font-size: 25px;
+}
+#resetVent { 
+	position: absolute;
+	top: 320px;
+	left: 330px;
+	width: 250px;
+	padding: 6 0;
+	background-color: red; 
+	border: 2px solid black;
+	font-size: 25px;
+}
+
+
+/* VARMEBEHOV */
+#titleVB1 { position:relative;	top:0px; font-size:24px;}
+#titleVB2 { position:relative;	top:-16px; font-size:24px;}
+
+#feltVB1 { position:relative;	top:-18px; }
+#feltVB2 { position:relative;	top:-35px; }
+
+#resultatVB {	
+	position: relative;
+	top: 620px;
+	height: 340px;
+	width: 900px;
+	padding: 0 20;
+	margin-bottom: 45px;
+	background-color: #d4d4d4;
+	border: 2px solid black;
+	text-align: center;
+	line-height: 1.1;
+}
+#submitVB { 
+	position: relative;
+	top: 22px;
+	width: 250px;
+	padding: 6 0;
+	background-color: green; 
+	border: 2px solid black;
+	font-size: 25px;
+}
+#resetVB { 
+	position: absolute;
+	top: 260px;
+	left: 329px;
+	width: 250px;
+	padding: 6 0;
+	background-color: red; 
+	border: 2px solid black;
+	font-size: 25px;
+}

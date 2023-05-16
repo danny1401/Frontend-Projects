@@ -1,0 +1,86 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./style.css">	
+	<title>Oppvarming av hus</title>
+
+<script>
+/* Oppvarming */
+function beregning(oppvarming) {
+	var Lengde = oppvarming.Lengde.value.replace(",",".");
+	var Bredde = oppvarming.Bredde.value.replace(",",".");
+	var Hoyde = oppvarming.Hoyde.value.replace(",",".");
+	var T_Start = oppvarming.TemperaturStart.value.replace(",",".");
+	var T_Slutt = oppvarming.TemperaturSlutt.value.replace(",",".");
+
+if (Lengde > 0 && Bredde > 0 && Hoyde > 0) {
+	var Areal = Lengde * Bredde;
+	var Volum = Areal * Hoyde;
+
+	var Energi = 0.35;
+	var T_Forskjell = T_Slutt - T_Start;
+	var T_Oppvarming = Volum * Energi * T_Forskjell;
+	
+	var Oppvarming = T_Oppvarming.toFixed(3);
+	
+	document.getElementById("oppvarmingR").innerHTML = "Ut i fra opplysningene, har vi beregnet volumet og oppvarmingen til huset.<p>Rommet har en volum på "+Volum+" m&#179 og starter på "+T_Start+" grader.<p>Din ønskede temperatur i rommet er på "+T_Slutt+" grader.<p>Da trengs det "+T_Forskjell+" grader for å varme opp rommet som tilsvarer "+Oppvarming+" W.<p>"+Volum+" m&#179 &#215; "+T_Forskjell+" grader &#215; 0,35 W = "+Oppvarming+" W";
+}
+else { alert( "Du må skrive et positivt tall." ); }
+}
+function nullstill(oppvarming) {
+	document.getElementById("oppvarmingR").innerHTML = '';
+}
+</script>
+</head>
+<body>
+<center>
+<script language="JavaScript" src="./meny.js"></script>
+
+<div id="info">
+<center><h1 style="position:relative;top:-6;font-size:35px;margin-bottom:10;">Info</h1></center>
+Her kan du beregne hvor mye energi som trengs 
+for å varme opp huset til en ønsket temperatur.
+<p>
+For å finne ut hvor mye varme som trengs,
+så trenger man å finne ut<br> hvor mange grader 
+det er fra den nåværende temperaturen 
+i rommet<br> til den ønskede temperaturen.
+<p>
+Energibruket for å varme opp 1 m&#179; med 1 grad er 0,35 Watt.
+</div>
+
+<form name="oppvarming">
+<div id="boksV2">
+<center><h1 style="font-size:35px;"><i>Volum</i><em> </em>av rom</h1></center>
+<h2 class="titleO">Lengde</h2>
+<input id="feltO" class="felt" type="text" name="Lengde" placeholder="0">
+<p>
+<h2 class="titleO">Bredde</h2>
+<input id="feltO" class="felt" type="text" name="Bredde" placeholder="0">
+<p>
+<h2 class="titleO">Høyde</h2>
+<input id="feltO" class="felt" type="text" name="Hoyde" placeholder="0">
+</div>
+
+<div id="boksO">
+<center><h1 style="position:relative;top:-7;font-size:35px;margin-bottom:10;"><i>Oppvarming</i> av rom</h1></center>
+<h2 style="position:relative;top:-10px;margin-bottom:0;">Temperatur</h2>
+<h3 id="titleTS1">Start</h3>
+<input id="feltTS1" class="felt" type="text" name="TemperaturStart" placeholder="0">
+<p>
+<h3 id="titleTS2">Slutt</h3>
+<input id="feltTS2" class="felt" type="text" name="TemperaturSlutt" placeholder="0">
+<br>
+<a href="#resetO"><input id="submitO" class="knapp" type="button" value="Beregn" name="beregn" onClick="beregning(oppvarming)"></a>
+</div>
+
+<div id="resultatO">
+<center><h1 style="font-size:35px;">Resultater</h1></center>
+<p><div id="oppvarmingR"></div>
+<input id="resetO" class="knapp" type="reset" name="Nullstill" value="Nullstill" onclick="nullstill(oppvarming)">
+</div>
+</form>
+
+</center>
+</body>
+</html>

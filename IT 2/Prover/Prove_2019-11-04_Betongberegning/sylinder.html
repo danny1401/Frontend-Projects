@@ -1,0 +1,76 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./style.css">	
+	<title>Betongberegning</title>
+
+<script>
+/* Sylinder */
+function beregnfunction(sylinder) {
+	var DiameterS = sylinder.DiameterS.value.replace(",",".");
+	var HoydeS = sylinder.HoydeS.value.replace(",",".");
+
+if (DiameterS > 0 && HoydeS > 0) {
+	var Pose = 12.5;
+	var Pi = 3.14159265359;
+	var Radius = DiameterS/2;
+	
+	var VolumS = (Pi * (Radius * Radius) * HoydeS);
+	var LiterS = VolumS * 0.001;
+	var Sekk_S = LiterS/Pose;
+	var PrisS = Sekk_S * 69;
+	
+	var AvrundetVolumS = VolumS.toFixed(6);
+	var AvrundetLiterS = LiterS.toFixed(6);
+	var AvrundetSekk_S = Sekk_S.toFixed(6);
+	var AvrundetPrisS = PrisS.toFixed(6);
+
+	document.getElementById("volumR").innerHTML = "Ut i fra opplysningene, vil sylinderen ha volumet "+AvrundetVolumS+".";
+	document.getElementById("literR").innerHTML = "Sylinderen fyller "+AvrundetLiterS+" liter av Betong Type B25.";
+	document.getElementById("sekk_R").innerHTML = "For å fylle sylinderen, trengs det "+AvrundetSekk_S+" liter av betongsekker.";
+	document.getElementById("prisR").innerHTML = "Totalprisen er "+AvrundetPrisS+" kr.";
+}
+else { alert( "Du må skrive et positivt tall." ); }
+}
+
+function nullstill(sylinder) {
+    document.getElementById("volumR").innerHTML = '';
+    document.getElementById("literR").innerHTML = '';
+    document.getElementById("sekk_R").innerHTML = '';
+    document.getElementById("prisR").innerHTML = '';
+}
+</script>
+</head>
+<body>
+<center>
+<script language="JavaScript" src="./meny.js"></script>
+
+<a href="./kasse.html"><button class="knappKSP">Kasse</button></a>
+<a href="./sylinder.html"><button class="knappKSP">Sylinder</button></a>
+<a href="./prisme.html"><button class="knappKSP">Prisme</button></a>
+
+
+<form name="sylinder">
+<div id="boksKSP">
+<center><h1>Beregning av <i>Sylinder</i></h1></center>
+<h2 id="titleDS">Diameter</h2>
+<h2 id="titleHS">Høyde</h2>
+
+<input id="feltDS" class="felt" type="text" name="DiameterS" placeholder="0">
+<input id="feltHS" class="felt" type="text" name="HoydeS" placeholder="0">
+<input id="submitS" class="knappKSP" type="button" value="Beregn" name="beregn" onClick="beregnfunction(sylinder)">
+</div>
+
+<div id="resultatKSP">
+<center><h1 style="font-size:35px;">Resultater</h1></center>
+<p><div id="volumR"></div>
+<p><div id="literR"></div>
+<p><div id="sekk_R"></div>
+<p><div id="prisR"></div>
+<input id="resetKSP" class="knappKSP" type="reset" name="Nullstill" value="Nullstill" onclick="nullstill(sylinder)">
+</div>
+</form>
+
+</center>
+</body>
+</html>

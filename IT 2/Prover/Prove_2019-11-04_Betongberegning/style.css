@@ -1,0 +1,313 @@
+body {
+	background-color: #c0c0c0;	
+	font-family: HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+#BackButton {
+	position: absolute;
+	top: 112px;
+	left: 17px;
+	height: 60px; 
+	width: 62px;
+	z-index: 2;
+}
+
+/* NAVBAR */
+#bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 91px;
+	width: 100%;
+	background-color: #303030;
+	border-bottom: 4px solid black;
+	z-index: 2;
+}
+.navbtn {
+    padding: 12px 0;
+    padding-top: 13px;
+	color: white;
+	background-color: black;
+	border: 1px solid white;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 600;
+    text-align: center;
+    text-decoration: none; 
+	text-transform: uppercase;
+	letter-spacing: 1.5;
+	z-index: 2;
+}
+.navbtn:hover {	background-color: #101010; }
+
+#navbtn1 {	position: fixed; top: 23px;	left: 40px;	width: 140px;	}
+#navbtn2 {	position: fixed; top: 23px;	left: 231px; width: 140px;	}
+#navbtn3 {	position: fixed; top: 23px;	left: 423px; width: 140px;	}
+#navbtn4 {	position: fixed; top: 23px;	left: 614px; width: 140px;	}
+
+#navtitle {
+	position: fixed;
+	top: -9px;
+	right: 40px;
+	width: 520px;
+	padding: 8 0;
+	color: white;
+	background-color: black;
+	background: linear-gradient(to bottom, black 0%, #101010 100%);
+	border: 1px solid white;
+	border-radius: 10px;
+	font-size: 38px;
+	font-family: 'Lexend Deca', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1;
+	z-index: 2;
+}
+#info {
+	position: absolute;
+	top: 546px;
+	opacity: 0.1;
+}
+#bilder {
+	position: absolute;
+	top: 1092px;
+	opacity: 0.1;
+}
+#beregn {
+	position: absolute;
+	top: 1640px;
+	opacity: 0.1;
+}
+#kasse {
+	position: absolute;
+	top: 2198px;
+	opacity: 0.1;
+}
+#sylinder {
+	position: absolute;
+	top: 2743px;
+	opacity: 0.1;
+}
+#prisme {
+	position: absolute;
+	top: 3888px;
+	opacity: 0.1;
+}
+
+/* HOME */
+#maintitle {
+	position: relative;
+	top: 252px;
+	width: 950px;
+	padding: 30 0;
+	color: white;
+	background: linear-gradient(to bottom, #303030 0%, #808080 100%);
+	border: 4px solid black;
+	border-radius: 10px;
+	font-size: 55px;
+	font-family: 'Lexend Deca', sans-serif;
+	text-shadow: 3px 3px black;
+	text-transform: uppercase;
+	letter-spacing: 1;
+}
+
+/* INFO */
+#info-boks {	
+	position: absolute;
+	top: 720px;
+	left: 90px;
+	height: 345px;
+	width: 470px;
+	padding: 10 40;
+	background-color: #d4d4d4;
+	border: 4px solid black;
+	border-radius: 10px;
+	text-align: left;
+	line-height: 1.1;
+}
+#info-bilde {	
+	position: absolute;
+	top: 720px;
+	right: 90px;
+	height: 365px;
+	width: 550px;
+	background-color: grey;
+	border: 4px solid black;
+	border-radius: 10px;
+}
+
+
+/* BILDER */
+.bilde {
+	position: absolute;
+	height: 200px;
+	width: 360px;
+	border: 3px solid black;
+	border-radius: 8px;
+}
+#bilde1 { top:1230px;	left:90px; }
+#bilde2 { top:1230px;	left:490px; }
+#bilde3 { top:1230px;	right:90px; }
+#bilde4 { top:1470px;	left:90px; }
+#bilde5 { top:1470px;	left:490px; }
+#bilde6 { top:1470px;	right:90px; margin-bottom:50px; }
+
+
+
+
+/* BEREGN */
+#boksB {	
+	position: absolute;
+	top: 215px;
+	left: 90px;
+	height: 165px;
+	width: 470px;
+	padding: 100 40;
+	background-color: #d4d4d4;
+	border: 4px solid black;
+	border-radius: 10px;
+	font-size: 24px;
+	text-align: left;
+	line-height: 1.4;
+}
+#titleB {
+	position: absolute;
+	top: 215px;
+	left: 296px;
+	font-size: 45px;
+}
+#bildeB {	
+	position: absolute;
+	top: 215px;
+	right: 90px;
+	height: 365px;
+	width: 550px;
+	background-color: grey;
+	border: 4px solid black;
+	border-radius: 10px;
+}
+.knappKSP {
+	position: relative;
+	top: 120px;
+	width: 155px;
+	padding: 8 0;
+	margin: 0 15;
+	color: white;
+	background: linear-gradient(to bottom, #303030 0%, #808080 100%);
+	border: 3px solid black;
+	border-radius: 10px;
+	font-size: 24px;
+	font-family: 'Lexend Deca', sans-serif;
+	text-shadow: 2px 1px black;
+	outline: none;
+}
+
+/*----------------------KASSE & SYLINDER & PRISME-----------------------*/
+#boksKSP {	
+	position: absolute;
+	top: 215px;
+	left: 90px;
+	height: 365px;
+	width: 470px;
+	padding: 0 40;
+	background-color: #d4d4d4;
+	border: 4px solid black;
+	border-radius: 10px;
+	text-align: left;
+	line-height: 1.1;
+}
+#resultatKSP {	
+	position: absolute;
+	top: 215px;
+	right: 90px;
+	height: 365px;
+	width: 510px;
+	padding: 0 20;
+	background-color: #d4d4d4;
+	border: 4px solid black;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 1.1;
+}
+#resetKSP { 
+	position: absolute;
+	top: 280px;
+	left: 138px;
+	width: 250px;
+	padding: 9 0;
+	border: 2px solid black;
+	border-radius: 7px;
+	font-size: 25px;
+}
+.felt {
+	width: 200px;
+	padding: 7px 0;
+	padding-top: 9px;
+	border: 1px solid black;
+	border-radius: 7px;
+	font-size: 22px;
+	text-align: center;
+	outline: none;
+}
+#volumR { position:relative; top:0px; font-size:17.5px; }
+#literR { position:relative; top:10px; font-size: 17.5px; }
+#sekk_R { position:relative; top:20px; font-size: 17.5px; }
+#prisR { position:relative; top:30px; font-size: 17.5px; }
+
+::placeholder {color:black;}
+
+
+/* KASSE */
+#submitK { 
+	position: absolute;
+	top: 249px; 
+	right: 32px;  
+	width: 200px;
+	padding: 11 0;
+	border: 2px solid black;
+	border-radius: 7px;
+	font-size: 25px;
+}
+#titleLK { position:absolute;	top:80px;	left:105px; }
+#titleBK { position:absolute;	top:80px;	right:105px; }
+#titleHK { position:absolute; 	top:200px;	left: 110px; }
+
+#feltLK { position:absolute;	top:135px;	left:47px; }
+#feltBK { position:absolute;	top:135px;	right:47px; }
+#feltHK { position:absolute; 	top:255px;	left: 47px; }
+
+
+/* SYLINDER */
+#submitS { 
+	position: absolute;
+	top: 260px; 
+	left: 111px;  
+	width: 300px;
+	padding: 11 0;
+	border: 2px solid black;
+	border-radius: 7px;
+	font-size: 25px;
+}
+#titleDS { position:absolute;	top:95px;	left:98px; }
+#titleHS { position:absolute;	top:95px;	right:110px; }
+
+#feltDS { position:absolute;	top:150px;	left:47px; }
+#feltHS { position:absolute;	top:150px;	right:47px; }
+
+
+/* PRISME */
+#submitP { 
+	position: absolute;
+	top: 249px; 
+	right: 32px;  
+	width: 200px;
+	padding: 11 0;
+	border: 2px solid black;
+	border-radius: 7px;
+	font-size: 25px;
+}
+#titleLP { position:absolute;	top:80px;	left:105px; }
+#titleBP { position:absolute;	top:80px;	right:105px; }
+#titleHP { position:absolute; 	top:200px;	left: 110px; }
+
+#feltLP { position:absolute;	top:135px;	left:47px; }
+#feltBP { position:absolute;	top:135px;	right:47px; }
+#feltHP { position:absolute; 	top:255px;	left: 47px; }
