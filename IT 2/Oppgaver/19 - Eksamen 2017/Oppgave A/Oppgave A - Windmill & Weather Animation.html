@@ -1,0 +1,131 @@
+<html>
+<head>   
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=1366, initial-scale=1">
+    <title>Eksamen 2017</title>       
+	
+<style>    
+body {
+	background-image: url(./landscape1.jpg);
+	background-size: cover;
+	overflow: hidden;
+}
+#stolpe {
+    position: absolute;
+    right: 386px;
+    bottom: 30px;
+	height: 300px;
+    width: 14px;
+	background-color: lightgrey;
+	border: 2px solid black;
+	border-bottom: 1px solid black;
+	border-radius: 3px;
+}
+.propellen {
+    position: absolute;
+    top: 200px;
+    right: 315px;
+    height: 160px;
+    width: 160px;
+    margin: 0px 0px 0px 0px;   
+}
+	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+	@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.sky {
+	left: -400px;
+    animation-direction: normal; 
+}      
+    @-moz-keyframes eksempel { from{left:0px;} to{left:3000px;} }
+    @-webkit-keyframes eksempel { from{left:0px;} to{left:3000px;} }
+    @keyframes eksempel{from{left:0px;} to{left:3000px;} }
+#sky1 { position: absolute; top: 10px; }
+#sky2 { position: absolute; top: 40px; left: -300px; }
+#sky3 {	position: absolute; top: 20px; left: -700px; }
+#sky4 {	position: absolute; top: 30px; left: -1100px; }
+
+.busk {
+    transition-property: transform;
+    
+    -webkit-animation-name: tilter;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    
+    -moz-animation-name: tilter;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    
+    -ms-animation-name: tilter;
+    -ms-animation-duration: 2s;
+    -ms-animation-timing-function: ease-in-out;
+    -ms-animation-iteration-count: infinite;
+    
+    animation-name: tilter;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+}
+@keyframes tilter { from { transform:rotate(-5deg); } to { transform:rotate(20deg); } }
+#busk1 { position: absolute; top: 240px; left: 220px;}
+#busk2 { position: absolute; top: 235px; left: 300px; }
+
+
+.tre {
+    transition-property: transform;
+    animation-name: tresvai;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes tresvai { from { transform:rotate(5deg); } to { transform:rotate(0deg); } }
+#tre { position: absolute; top: 105px; left: 10px; }
+</style>
+
+<script>
+function oppdatereRotor() {
+	var vindVerdi = document.getElementById("vindHastighet").value;
+	document.getElementById("rotor").innerHTML = '<img class="propellen" src="propell.png" alt="" width="360" height="360" style="-webkit-animation:spin '+vindVerdi+'s linear infinite; -moz-animation:spin '+vindVerdi+'s linear infinite; animation:spin '+vindVerdi+'s linear infinite;">';
+	
+	var sky = vindVerdi * 20;
+	document.getElementById("sky1").innerHTML = '<img id="sky1" class="sky" src="./cloud.png" alt="" height="80px" width="170px" style="-webkit-animation:eksempel '+sky+'s linear infinite; -moz-animation:eksempel '+sky+'s linear infinite; animation:eksempel '+sky+'s linear infinite;">';
+	document.getElementById("sky2").innerHTML = '<img id="sky2" class="sky" src="./cloud1.png" alt="" height="60px" width="130px" style="-webkit-animation:eksempel '+sky+'s linear infinite; -moz-animation:eksempel '+sky+'s linear infinite; animation:eksempel '+sky+'s linear infinite;">';
+	document.getElementById("sky3").innerHTML = '<img id="sky3" class="sky" src="./cloud2.png" alt="" height="80px" width="170px" style="-webkit-animation:eksempel '+sky+'s linear infinite; -moz-animation:eksempel '+sky+'s linear infinite; animation:eksempel '+sky+'s linear infinite;">';
+	document.getElementById("sky4").innerHTML = '<img id="sky4" class="sky" src="./cloud.png" alt="" height="70px" width="150px" style="-webkit-animation:eksempel '+sky+'s linear infinite; -moz-animation:eksempel '+sky+'s linear infinite; animation:eksempel '+sky+'s linear infinite;">';
+	
+	var busk = vindVerdi * 3;
+	document.getElementById("busk1").innerHTML = '<img id="busk1" class="busk" src="./busk.png" alt="" height="200px" width="120px" style="-webkit-animation:tilter '+busk+'s linear alternate-reverse infinite; -moz-animation:tilter '+busk+'s linear alternate-reverse infinite; animation:tilter '+busk+'s linear alternate-reverse infinite;">';
+	document.getElementById("busk2").innerHTML = '<img id="busk2" class="busk" src="./busk.png" alt="" height="250px" width="160px" style="-webkit-animation:tilter '+busk+'s linear alternate-reverse infinite; -moz-animation:tilter '+busk+'s linear alternate-reverse infinite; animation:tilter '+busk+'s linear alternate-reverse infinite;">';
+
+	var tre = vindVerdi * 15;
+	document.getElementById("tre").innerHTML = '<img id="tre" class="tre" src="./tree.png" alt="" height="750px" width="380px" style="-webkit-animation:tresvai '+tre+'s linear alternate-reverse infinite; -moz-animation:tresvai '+tre+'s linear alternate-reverse infinite; animation:tresvai '+tre+'s linear alternate-reverse infinite;">';
+}
+</script>
+</head>
+<body onload="oppdatereRotor()">
+
+<div id="stolpe"></div>
+
+<div id="startTekst">
+	<select id="vindHastighet" onchange="oppdatereRotor()">
+		<option value="0">Stopp</option>
+		<option value="6">Sakte</option>
+		<option value="2">Rolig</option>
+		<option value="0.9">Hurtig</option>
+		<option value="0.5">Veldig hurtig</option>
+		<option value="0.1">Sprint</option>
+	</select>
+</div>
+<div id="rotor"></div>
+<div id="sky1"></div>
+<div id="sky2"></div>
+<div id="sky3"></div>
+<div id="sky4"></div>
+<div id="busk1"></div>
+<div id="busk2"></div>
+<div id="tre"></div>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<html>
+<head>   
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=1366, initial-scale=1">
+    <title>Eksamen 2017</title>       
+
+<script>
+function start(skjema) {
+var tid1 = skjema.en.value;
+var tid2 = skjema.to.value;
+var tid3 = skjema.tre.value;
+var tid4 = skjema.fire.value;
+
+if(tid1>=0 && tid2>=0 && tid3>=0 && tid4>=0) {
+	var wattproduksjon = (Number(tid1) + Number(tid2) + Number(tid3) + Number(tid4));
+	document.getElementById("svar1").innerHTML ="<h3>Mellom klokken 02-08 ble det produsert "+tid1+" watt.</h3>";
+	document.getElementById("svar2").innerHTML ="<h3>Mellom klokken 08-14 ble det produsert "+tid2+" watt.</h3>";
+	document.getElementById("svar3").innerHTML ="<h3>Mellom klokken 14-20 ble det produsert "+tid3+" watt.</h3>";
+	document.getElementById("svar4").innerHTML ="<h3>Mellom klokken 20-02 ble det produsert "+tid4+" watt.</h3>";
+	document.getElementById("svar").innerHTML ="<h3>For hele d&oslash;gnet ble det produsert <br> til sammen "+wattproduksjon+" watt.</h3>";
+}
+else {
+	alert("Vindstyrken kan ikke være negativ!");
+}
+}
+</script>
+<style>
+body {
+	background-image: url(./Windmill.jpeg);
+	background-size: cover;
+	overflow: hidden;
+	font-family: HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+#title {
+	position: absolute;
+	top: -30px;
+	left: 0;
+	width: 100%;
+	padding: 23px 0;
+	padding-top: 30px;
+	color: white;
+	background-color: #202020;
+	border-bottom: 4px solid black;
+	font-size: 35px;
+	letter-spacing: 1;
+}
+#boks1 {
+	position: absolute;
+	top: 155px;
+	left: 90px;
+	height: 380px;
+	width: 470px;
+	padding: 10px 40px;
+	background-color: #99ebff;
+	border: 2px solid black;
+	opacity: 0.9;
+}
+#boks2 {
+	position: absolute;
+	top: 155px;
+	right: 90px;
+	height: 386px;
+	width: 470px;
+	padding: 8px 40px;
+	background-color: #99ebff;
+	border: 2px solid black;
+	opacity: 0.9;
+	line-height: 1.6;
+}
+#tekst {
+	position: absolute;
+	top: 235px;
+	left: 232px;
+}
+select {
+	height: 30px;
+	width: 180px;
+	color: black;
+	border: 1px solid black;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 2px;
+	padding-left: 10px;
+	margin-left: 8px;
+	margin-bottom: 8px;
+}
+#submit {
+	position: relative;
+	top: 6px;	
+	width: 180px;
+	padding: 7px;
+	color: black;
+	background-color: white;
+	border: 1px solid black;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+#BackButton {
+	position: absolute;
+	top: 13px;
+	left: 25px;
+	height: 63px; 
+	width: 65px;
+	z-index: 2;
+}
+</style>
+</head>
+<body>
+<center>
+<a href="./../../assignmentsT2_140IOl.html"><img src="./../backbuttonW.png" id="BackButton"></img></a>
+<h1 id="title">Wattproduksjon per D&oslash;gn</h1>
+
+<div id="boks1">
+<h1>Sett inn vindstyrke</h1>
+</div>
+<div id="tekst">
+<form name="skjema">
+	<h3>Kl 02-08: 
+	<select name="en">
+		<option name="stille" value="0">Stille</option>
+		<option name="flauvind" value="0">Flau vind</option>
+		<option name="svakvind" value="2">Svak vind</option>
+		<option name="lettbris" value="10">Lett bris</option>
+		<option name="laberbris" value="60">Laber bris</option>
+		<option name="friskbris" value="150">Frisk bris</option>
+		<option name="litenkuling" value="400">Liten kuling</option>
+		<option name="stivkuling" value="500">Stiv kuling</option>
+		<option name="sterk" value="0">Sterk kuling</option>
+	</select></h3>
+<p>
+	<h3>Kl 08-14:	
+	<select name="to">
+		<option name="stille" value="0">Stille</option>
+		<option name="flauvind" value="0">Flau vind</option>
+		<option name="svakvind" value="2">Svak vind</option>
+		<option name="lettbris" value="10">Lett bris</option>
+		<option name="laberbris" value="60">Laber bris</option>
+		<option name="friskbris" value="150">Frisk bris</option>
+		<option name="litenkuling" value="400">Liten kuling</option>
+		<option name="stivkuling" value="500">Stiv kuling</option>
+		<option name="sterk" value="0">Sterk kuling</option>
+	</select></h3>
+<p>
+	<h3>Kl 14-20: 
+	<select name="tre">
+		<option name="stille" value="0">Stille</option>
+		<option name="flauvind" value="0">Flau vind</option>
+		<option name="svakvind" value="2">Svak vind</option>
+		<option name="lettbris" value="10">Lett bris</option>
+		<option name="laberbris" value="60">Laber bris</option>
+		<option name="friskbris" value="150">Frisk bris</option>
+		<option name="litenkuling" value="400">Liten kuling</option>
+		<option name="stivkuling" value="500">Stiv kuling</option>
+		<option name="sterk" value="0">Sterk kuling</option>
+	</select></h3>
+<p>
+	<h3>Kl 20-02: 
+	<select name="fire">
+		<option name="stille" value="0">Stille</option>
+		<option name="flauvind" value="0">Flau vind</option>
+		<option name="svakvind" value="2">Svak vind</option>
+		<option name="lettbris" value="10">Lett bris</option>
+		<option name="laberbris" value="60">Laber bris</option>
+		<option name="friskbris" value="150">Frisk bris</option>
+		<option name="litenkuling" value="400">Liten kuling</option>
+		<option name="stivkuling" value="500">Stiv kuling</option>
+		<option name="sterk" value="0">Sterk kuling</option>
+	</select></h3>
+</form>
+<input type="button" value="Beregn" onclick="start(skjema)" id="submit">
+</div></center>
+
+<div id="boks2">
+<center>
+	<h1>Resultat</h1>
+	<div id="svar1"></div>
+	<div id="svar2"></div>
+	<div id="svar3"></div>
+	<div id="svar4"></div>
+	<div id="svar"></div>
+</center>
+</div>
+
+</body>
+</html>

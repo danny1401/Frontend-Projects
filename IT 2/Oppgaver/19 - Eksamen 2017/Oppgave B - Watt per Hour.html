@@ -1,0 +1,132 @@
+<html>
+<head>   
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=1366, initial-scale=1">
+    <title>Eksamen 2017</title>       
+	
+<style>    
+body {
+	background-image: url(./Windmill.jpeg);
+	background-size: cover;
+	overflow: hidden;
+	font-family: HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+#title {
+	position: absolute;
+	top: -30px;
+	left: 0;
+	width: 100%;
+	padding: 23px 0;
+	padding-top: 30px;
+	color: white;
+	background-color: #202020;
+	border-bottom: 4px solid black;
+	font-size: 35px;
+	letter-spacing: 1;
+}
+#boks {
+	position: relative;
+	top: 160px;
+	height: 270px;
+	width: 600px;
+	padding: 30px;
+	background-color: #99ebff;
+	border: 2px solid black;
+	opacity: 0.9;
+}
+#line {
+	position: relative;
+	top: 35px;
+}
+.felt {
+	height: 30px;
+	width: 180px;
+	color: black;
+	border: 1px solid black;
+	font-size: 20px;
+	text-align: center;
+}
+#submit {
+	position: relative;
+	top: 60px;	
+	width: 180px;
+	padding: 7px;
+	color: black;
+	background-color: white;
+	border: 1px solid black;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+#BackButton {
+	position: absolute;
+	top: 13px;
+	left: 25px;
+	height: 63px; 
+	width: 65px;
+	z-index: 2;
+}
+</style>
+</head>
+<body onload="start()">
+<center>
+<a href="./../../assignmentsT2_140IOl.html"><img src="./../backbuttonW.png" id="BackButton"></img></a>
+<h1 id="title">Wattproduksjon per Time</h1>
+
+<div id="boks">
+<h1>Beregning av vindkraft</h1>
+<h2 id="line">Oppgi vindkraft: <input type="number" id="tall" class="felt"> m/s</h2>
+</div>
+<input type="submit" value="Beregn" onclick="formdata()" id="submit">
+
+</center>
+<script>
+function formdata() {
+
+var vindhastighet = document.getElementById("tall").value;
+	alert("Vindhastigheten blir "+vindhastighet+".");
+if (vindhastighet < 0){
+	alert("Du må bruke positive tall!");
+}
+if (vindhastighet >= 0 & vindhastighet <= 0.2){
+	var wattproduksjon = 0;
+	alert("Wattproduksjonen blir ca. "+wattproduksjon+" watt i timen.");
+}
+if (vindhastighet >= 0.3 & vindhastighet <= 1.5 ){
+	var wattproduksjon = 0;
+	alert("Wattproduksjonen blir ca. "+wattproduksjon+" watt i timen.");
+}
+if (vindhastighet >= 1.6 & vindhastighet <= 3.3 ){
+	var wattproduksjon = 2;
+	alert("Wattproduksjonen blir ca. "+wattproduksjon+" watt i timen.");
+}
+if (vindhastighet >= 3.4 & vindhastighet <= 5.4 ){
+	var wattproduksjon = 10;
+	alert("Wattproduksjonen blir ca. "+wattproduksjon+" watt i timen.");
+}
+if (vindhastighet >= 5.5 & vindhastighet <= 7.9 ){
+	var wattproduksjon = 60;
+	alert("Wattproduksjonen blir ca. "+wattproduksjon+" watt i timen.");
+}
+if (vindhastighet >= 8 & vindhastighet <= 10.7 ){
+	var wattproduksjon = 150;
+	alert("Wattproduksjonen blir ca. "+wattproduksjon+" watt i timen.");
+}
+if (vindhastighet >= 10.8 & vindhastighet <= 13.8 ){
+	var wattproduksjon = 400;
+	alert("Wattproduksjonen blir ca. "+wattproduksjon+" watt i timen.");
+}
+if (vindhastighet >= 13.9 & vindhastighet <= 17.1 ){
+	var wattproduksjon = 500;
+	alert("Wattproduksjonen blir ca. "+wattproduksjon+" watt i timen.");
+}
+if (vindhastighet >= 17.2  ){
+	var wattproduksjon = 0;
+	alert("Wattproduksjonen blir ca. "+wattproduksjon+" watt i timen.");
+}
+
+}
+</script>
+</body>
+</html>
