@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Kubenvika</title>
+<style>
+#title {
+	position: relative;
+	top: 35px;
+	background-color: white;
+	border: 3px solid black;
+	width: 26%;
+	height: 6.5%;
+}    
+#line {
+	position: relative;
+	top: 40px;	
+}
+.buttons .meny {  
+	position: relative;
+	top: 20px;
+    border-radius: 5px;
+	border: 2.3px solid black;
+	margin-left: 30px;
+    background-color: rgb(255, 217, 102);
+    padding: 10px 42px;
+    text-align: center;
+    text-decoration: none;
+    color: initial;  
+	font-family: Georgia, serif;
+	font-size: 14px;
+	
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.meny:hover {
+    background-color: rgb(77, 51, 0);
+    color: white;
+}
+#telefon {
+	position: absolute;
+	top: 160px;
+	left: 100px;
+}
+.emailfelt {
+	position: absolute;
+	top: 310px;
+	left: 100px;
+	margin-bottom: 50px;
+}
+#hytte4 {
+	position:absolute;
+	border: 2px solid white;
+	bottom: 150px;
+	left: 700px;
+}
+</style> 
+</head>
+<body>
+
+<body style="background-color:lightgreen;">
+
+<nav class="buttons" align="center">
+	<a href="./index-p1.html" class="meny"><strong>Startside</strong></a>
+	<a href="./hytte_bilder/hytte-info.html" class="meny"><strong>Info om hytta</strong></a>
+	<a href="./hytte_kart/hytte-kart.html" class="meny"><strong>Info om omr&aring;det</strong></a>
+	<a href="./Illustrasjonsbilder/hytte-naturen.html" class="meny"><strong>Bilder fra omr&aring;det</strong></a>
+	<a href="./kontakt_info.html" class="meny"><strong>Kontaktinformasjon</strong></a>
+</nav>
+
+<hr width ="99.8%" align="center" id="line" size="5px" color="white">
+</hr>
+
+<center><i><h1 id="title">Kontaktinformasjon</h1></i></center>
+
+<div id="telefon">
+	<h2>Telefon</h2>
+	<p>Her har du telefonnummeret mitt hvis du har sp&oslash;rsm&aring;l eller er interessert &aring; kj&oslash;pe hytta</p>
+	<p>Telefon Nr: <strong>123 45 678</strong></p>
+</div>
+
+<div class="emailfelt">
+	<h2>E-Mail</h2>
+	<p>Her kan du &aring; sende oss mail hvis du har sp&oslash;rsm&aring;l eller er interessert kj&oslash;pe hytta.</p>
+	<form action="http://www.informatikk1.net/felles/form_test_php/mail_get.php" method="get">
+	<table>
+	<tr><td>Til:</td><td><input type="text" name="felt1" size="70"></td></tr>
+
+	<tr><td>Emne:</td><td><input type="text" name="felt2" size="70"></td></tr>
+
+	<tr><td>Innhold:</td><td><input type="text" name="felt3" rows="6" cols="60" style="margin:0px; width: 523px; height: 107px;"></textarea></td></tr>
+
+	<tr><td>	</td><td>
+	<input type="image" src="./Send-Email-ButtonV2.png" value="submit" alt="Submit" width="200px" height="48px"
+	</table>
+</div>
+
+	<img src = "./hytte_bilder/hytte_4.jpg" id="hytte4" width="80%" height="80%"></img>
+	
+</body>
+</html>
