@@ -1,0 +1,141 @@
+<html>
+<head>
+<link rel="stylesheet" href="./ProveCSS.css">
+<title>Eikely Hotell</title>
+
+<style>
+#tekst {
+    position: absolute;
+    top: 200px;
+    left: 145px;
+	height: 120px;
+	width: 967px;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-size: 17px;
+	text-align: center;
+	color: black;
+	background-color: white;
+	border: 1px solid black;
+	z-index: -1;
+	margin-bottom: 60px;
+}
+#title3 {
+	position: absolute;
+	top: 900px;
+	left: 500px;
+}
+.pakker {
+	position: relative;
+	top: 230px;
+	left: 80px;
+	width: 270px;
+    padding: 60px;
+	padding-bottom: 0px;
+	float: left;	
+	z-index: -1;
+}
+.boks {
+    list-style-type: none;
+    border: 1px solid black;
+	background-color: white;
+    margin: 0;
+    padding: 0;
+}
+.boks li {
+    border-bottom: 1px solid black;
+	border-top: 1px solid black;
+    padding: 17px;
+    text-align: center;
+}
+
+.boks .fargeboks {
+    background-color: darkgrey;
+    font-size: 20px;
+	z-index: 1;
+}
+#konferanse {
+	padding: 0px;
+}
+#lunsj {
+	height: 10px;
+}
+#tillegg {
+	position: absolute;
+	top: 410px;
+	left: 8px;
+}
+#midtuken {
+	position: absolute;
+	top: 300px;
+	right: 170px;
+}
+</style>
+<body>
+
+<div class="fixed">
+	<h1 id="title">Eikely Hotell</h1>
+	
+	<img src="./bilder/juleklokker_2.png" id="Logo"></img>
+	
+	<div id="bakgrunnbar"></div>
+
+	<div class="buttons" align="center">
+		<a href="./indexP2.html" class="meny"><strong>Home</strong></a>
+		<a href="./arrangement.html" class="meny"><strong>Om arrangementet</strong></a>
+		<a href="./bestilling.html" class="meny"><strong>Bestilling</strong></a>
+		<a href="./statistikk.html" class="meny"><strong>Statistikk</strong></a>
+		<a href="./kontakt.html" class="meny"><strong>Kontakt</strong></a>
+	</div>
+</div>
+
+<center><h1 class="title2">Bestilling</h1></center>
+
+<div id="tekst">
+<center><h2>Informasjon om våre tilbud</h2></center>
+Her bestiller du etter dine valg. Du kan enten velge pakke og ...
+</div>
+
+<div class="pakker">
+	<ul class="boks">
+		<li class="fargeboks"><strong>Alternativ 1</strong></li>
+		<li>Per pers. i dobbeltrom</li>
+		<li>Julebord og konsert</li>
+		<li>Frokost</li>
+		<li  class="fargeboks"><strong>kr 1795,-</strong></li>
+	</ul>
+</div>
+<div id="konferanse"><div class="pakker">
+	<ul class="boks">
+		<li class="fargeboks"><strong>Konferansepakke <br>- for bedrifter</strong></li>
+		<li>I kombinasjon med <strong>Alternativ 1<br>+ kr 595,-</strong></li>
+		<li>Lån av møterom teknisk utstyr</li>
+		<li>Serveres kaffe/te, pepperkaker og lunsj</li>
+		<li class="fargeboks"><strong>kr 2390,-</strong></li>
+	</ul>
+</div></div>
+<div id="lunsj"><div class="pakker">
+	<ul class="boks">
+		<li class="fargeboks"><strong>Lørdagslunsj</strong></li>
+		<li>Per pers. i dobbeltrom</li>
+		<li class="fargeboks"><strong>kr 395,-</strong></li>
+	</ul>
+</div></div>
+<div id="midtuken"><div class="pakker">
+	<ul class="boks">
+		<li class="fargeboks"><strong>Midtuken</strong></li>
+		<li>Et utvalg av julemenyer</li>
+		<li class="fargeboks"><strong>kr 275,-</strong></li>
+	</ul>
+</div></div>
+<div id="tillegg"><div class="pakker">
+	<ul class="boks">
+		<li class="fargeboks"><strong>Tillegg for enkeltrom</strong></li>
+		<li>Per pers. i enkeltrom</li>
+		<li class="fargeboks"><strong>kr 300,-</strong></li>
+	</ul>
+</div></div>
+	
+	
+</body>
+</html>
