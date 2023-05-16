@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>Pizzeria</title>
+<link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
+
+<style>
+#title {
+	background-color: rgb(246, 163, 48);
+	border: 3px solid white;
+	width: 23%;
+	height: 6.5%;
+}
+h1 {
+	color: white;
+}
+#Gronnsaker {
+	position: absolute;
+	top: 180px;
+	left: 200px;
+}
+#Kjott {
+	position: absolute;
+	top: 180px;
+	left: 420px;
+}
+#Fisk {
+	position: absolute;
+	top: 180px;
+	left: 620px;
+}
+#Annet {
+	position: absolute;
+	top: 180px;
+	left: 830px;
+}
+#Kontaktfelt {
+	position: absolute;
+	top: 450px;
+	left: 200px;
+}
+#Kontakt {
+	position: absolute;
+	top: 400px;
+}
+#LevereEllerHente {
+	position: absolute;
+	top: 480px;
+	left: 500px;
+}
+#Submit {
+	position: absolute;
+	top: 490px;
+	left: 850px;
+}
+#PizzaAd {
+	position: absolute;
+	top: 200px;
+	right: 90px;
+}
+</style>
+</head>
+<body style="background-color: rgb(255, 209, 115); background-size: 100%">
+
+<center><i><h1 id="title">Danny's Pizzeria</h1></i></center>
+<hr width ="99.8%" align="center" size="5px" color="white">
+</hr>
+
+<center><h2><ins>Her kan du lage din egen pizza eller bestille din egen pizza.</ins></h2></center>
+<form action="http://www.informatikk1.net/cgi-bin/form_test/test_get.cgi" method="get">
+      <h3>Topping: </h3>
+	  
+	  <div id="Gronnsaker">
+	  <h3> Gr&oslash;nnsaker: </h3>
+	  <input type = "checkbox" name = "felt1" value= "Sjampinjong">Sjampinjong<br>
+      <input type = "checkbox" name = "felt2" value= "Mais">Mais<br>
+      <input type = "checkbox" name = "felt3" value= "Tomater">Tomater<br>
+      <input type = "checkbox" name = "felt4" value= "Paprika">Paprika<br>
+	  <input type = "checkbox" name = "felt5" value= "L&oslash;k">L&oslash;k<br>
+	  </div>
+	  
+	  <div id="Kjott">
+	  <h3> - Kj&oslash;tt: </h3>
+	  <input type = "checkbox" name = "felt6" value= "P&oslash;lse">P&oslash;lse<br>  
+	  <input type = "checkbox" name = "felt7" value= "Bacon">Bacon<br>  
+      <input type = "checkbox" name = "felt8" value= "Pepperoni">Pepperoni<br>
+      <input type = "checkbox" name = "felt9" value= "Beef">Beef<br>
+      <input type = "checkbox" name = "felt10" value= "Kylling">Kylling<br>
+      <input type = "checkbox" name = "felt11" value= "Salami">Salami<br>
+      <input type = "checkbox" name = "felt12" value= "Skinke">Skinke<br>
+	  </div>
+	  
+	  <div id="Fisk">
+	  <h3> - Fisk: </h3>
+	  <input type = "checkbox" name = "felt13" value= "Laks">Laks<br>  
+	  <input type = "checkbox" name = "felt14" value= "Tunfisk">Tunfisk<br>
+	  </div>
+	  
+	  <div id="Annet">
+	  <h3> - Annet: </h3>
+      <input type = "checkbox" name = "felt15" value= "Nachobiter">Nachobiter<br>
+	  <input type = "checkbox" name = "felt16" value= "Ananas">Ananas<br>
+	  <input type = "checkbox" name = "felt17" value= "Ekstra Cheese">Ekstra Cheese<br>  
+	  <input type = "checkbox" name = "felt18" value= "Oliven">Oliven<br>  
+	  <input type = "checkbox" name = "felt19" value= "Sopper">Sopper<br>  
+      </div>
+ 
+	  <h3 id="Kontakt">Kontakt:</h3>
+	  
+	  <div id="Kontaktfelt">
+      Fornavn:<br>
+      <input type="text" name="felt1">
+      <br>
+      Etternavn:<br>
+      <input type="text" name="felt2">
+      <br>
+      Telefon:<br>
+      <input type="text" name="felt3">
+      <br>
+	  </div>
+	  
+	  <div id="LevereEllerHente">
+      <input type = "checkbox" name = "felt14" value="Leveranse p&aring; d&oslash;ra"><strong>Leveranse p&aring; d&oslash;ra</strong><br>
+	  <br>
+	  <input type = "checkbox" name = "felt15" value= "Hente hos n&aelig;rmeste restaurant"><strong>Hente hos n&aelig;rmeste restaurant</strong><br> 
+      </div>
+	  
+	  <input type="submit" id="submit" value="Godta bestilling">
+</form>
+
+<img src="./PizzaAd.jpg" id="PizzaAd" height="40%" width="15%">
+
+</body>
+</html>
