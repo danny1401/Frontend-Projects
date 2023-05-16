@@ -1,0 +1,181 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=1366, initial-scale=1">
+	<title>Knop til Kilometer</title>
+
+<script>
+function beregnfunction(skjema) {
+
+var varKnop = skjema.Knop.value.replace(",",".");
+
+if(varKnop > 0) {
+var varFaktor = 1.852;
+var varKilometer = varKnop * varFaktor;
+skjema.Kilometer.value = varKilometer.toString().replace(".",",");
+document.body.style.background = "lightgreen";
+}
+
+else { alert( "Du må skrive et positivt tall." ); }
+
+if(varKnop < 5) {
+var varFaktor = 1.852;
+var varKilometer = varKnop * varFaktor;
+skjema.Kilometer.value = varKilometer.toString().replace(".",",");
+document.body.style.background = "#ffff33";
+}
+}
+</script>
+<style>
+#title {
+	position: relative;
+	top: 10px;
+	width: 550px;
+	padding: 15px 0px;
+	color: white;
+	background-color: #303030;
+	border: 4px solid black;
+	font-size: 40px;
+}
+#title1 {
+	position: absolute;
+	top: 121px;
+	left: 156px;
+	width: 444px;
+	padding: 12px 0px;
+	color: white;
+	background-color: #505050;
+	border: 2px solid black;
+	font-size: 27px;
+	text-align: center;
+}
+#title2 {
+	position: absolute;
+	top: 121px;
+	right: 156px;
+	width: 444px;
+	padding: 12px 0px;
+	color: white;
+	background-color: #505050;
+	border: 2px solid black;
+	font-size: 27px;
+	text-align: center;
+}
+#felt {
+	height: 55px;
+	width: 290px;
+	border: 2px solid black;
+	font-size: 25px;
+	text-align: center;
+	outline: none;
+}
+#knapp {
+	position: relative;
+	left: -6px;
+	height: 55px;
+	width: 160px;
+	border: 2px solid black;
+	font-size: 25px;
+	text-align: center;
+	outline: none;
+}
+#title3 {
+	position: absolute;
+	top: 285px;
+	left: 156px;
+	width: 444px;
+	padding: 12px 0px;
+	color: white;
+	background-color: #505050;
+	border: 2px solid black;
+	font-size: 27px;
+	text-align: center;
+}
+#boks1 {
+	position: absolute;
+	top: 369px;
+	left: 156px;
+	height: 155px;
+	width: 394px;
+	padding: 25px 25px;
+	color: black;
+	background-color: white;
+	border: 2px solid black;
+	font-size: 20px;
+}
+#title4 {
+	position: absolute;
+	top: 285px;
+	right: 156px;
+	width: 444px;
+	padding: 12px 0px;
+	color: white;
+	background-color: #505050;
+	border: 2px solid black;
+	font-size: 27px;
+	text-align: center;
+}
+#boks2 {
+	position: absolute;
+	top: 369px;
+	right: 156px;
+	height: 155px;
+	width: 394px;
+	padding: 25px 25px;
+	color: black;
+	background-color: white;
+	border: 2px solid black;
+	font-size: 20px;
+}
+#BackButton {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	height: 78px; 
+	width: 80px;
+}
+</style>
+</head>
+<body style="background: linear-gradient(to top, #006699 10%, #00ffff 100%);">
+<a href="./../../assignmentsT1_140IOl.html"><img src="./../backbuttonB.png" id="BackButton"></img></a>
+
+<center><h1 id="title">Knop til Kilometer</h1></center>
+<br><br>
+
+<form name="skjema">
+<h3 id="title1">Antall Knop:</h3>
+<div style="position: absolute;top: 205px;left: 156px;">
+<input id="felt" type="text" name="Knop" placeholder="0">
+<input id="knapp" type="button" name="beregn" value="Beregn" onClick="beregnfunction(skjema)">
+</div>
+
+<br><center><h1 style="position: relative;top: -33px;right: 2px;font-size: 50px;z-index: -1;">&rarr;</h1></center>
+
+<h3 id="title2">Antall Kilometer:</h3>
+<div style="position: absolute;top: 205px;right: 150px;">
+<input id="felt" type="text" name="Kilometer" placeholder="0">
+<input id="knapp" type="reset" name="Nullstill" value="Nullstill">
+</div>
+</form>
+
+<h3 id="title3">Hva er Knop?</h3>
+<div id="boks1">
+Knop er en m&aring;lenhet for et fart&oslash;ys hastighet.
+<p>
+Farten til en knop er en nautisk mil pr. time.
+<p>
+En nautisk mil tilsvarer 1852 meter.
+</div>
+
+<h3 id="title4">Hva er Kilometer?</h3>
+<div id="boks2">
+Kilometer er en m&aring;leenhet for lengde. 
+<p>
+En kilometer tilsvarer 1000 meter.
+<p>
+Symbolet for kilometer er <i>km</i>.
+</div>
+
+</body>
+</html>

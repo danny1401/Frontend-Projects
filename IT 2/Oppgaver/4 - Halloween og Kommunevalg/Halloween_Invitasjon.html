@@ -1,0 +1,176 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=1366, initial-scale=1">
+	<title>Halloween Invitasjon</title>
+
+<style>
+body {
+	background-image: url(./halloween.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	overflow: hidden;
+}
+@font-face {
+   font-family: CFHalloween-Regular;
+   src: url(./CFHalloween-Regular.ttf);
+}
+@font-face {
+   font-family: ScaryHalloweenFont;
+   src: url(./ScaryHalloweenFont.ttf);
+}
+i {
+	color: #f25a29;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+#title {
+	position: relative;
+	top: 60px;
+	height: 75px;
+	width: 780px;
+	padding: 20px 20px;
+	color: black;
+	background-color: #f25a29;
+	border: 7px solid black;
+	font-family: CFHalloween-Regular;
+	font-size: 56px;
+	z-index: 2;
+}
+#boks {
+	position: relative;
+	top: 5px;
+	height: 360px;
+	width: 780px;
+	padding: 0px 20px;
+	color: white;
+	background-color: #101010;
+	border: 7px solid black;
+	font-family: ScaryHalloweenFont;
+	font-size: 28px;
+	letter-spacing: 0.3;
+	z-index: 2;
+}
+
+#pumpkin1 {
+	position: absolute;
+	top: 410px;
+	left: 320px;
+	height: 110px;
+	width: 110px;
+	z-index: 2;
+	animation: pumpkin1 10s 1;
+}
+@keyframes pumpkin1 {	
+	50% {transform: rotate(-360deg); left:520px;}
+	50% {transform: rotate(360deg); left:520px;}
+}
+#pumpkin2 {
+	position: absolute;
+	top: 410px;
+	right: 320px;
+	height: 110px;
+	width: 110px;
+	z-index: 2;
+	animation: pumpkin2 10s 1;
+}
+@keyframes pumpkin2 {	
+	50% {transform: rotate(360deg); right:520px;}
+	50% {transform: rotate(-360deg); right:520px;}
+}
+#pumpkin3 {
+	position: absolute;
+	top: 410px;
+	right: 520px;
+	height: 110px;
+	width: 110px;
+	z-index: 2;
+	animation: pumpkin3 10s 1;
+}
+@keyframes pumpkin3 {	
+	50% {transform: rotate(-360deg); right:320px;}
+	50% {transform: rotate(360deg); right:320px;}
+}
+#pumpkin4 {
+	position: absolute;
+	top: 410px;
+	left: 520px;
+	height: 110px;
+	width: 110px;
+	z-index: 2;
+	animation: pumpkin4 10s 1;
+}
+@keyframes pumpkin4 {	
+	50% {transform: rotate(360deg); left:320px;}
+	50% {transform: rotate(-360deg); left:320px;}
+}
+
+div#ghost1	{
+    position: absolute;
+	top: 560px;
+    animation: ghost1 40s infinite;		}
+@-moz-keyframes ghost1 { from{left: -90px;} to{left: 1365px;} }
+@-webkit-keyframes ghost1 { from{left: -90px;} to{left: 1365px;} }
+@keyframes ghost1 {from{left: -90px;} to{left: 1365px;} }
+
+div#ghost2	{
+    position: absolute;
+	top: 10px;
+    animation: ghost2 18s infinite;		}
+@-moz-keyframes ghost2 { from{right: -90px;} to{right: 1390px;} }
+@-webkit-keyframes ghost2 { from{right: -90px;} to{right: 1360px;} }
+@keyframes ghost2 {from{right: -90px;} to{right: 1360px;} }
+
+div#ghost3	{
+    position: absolute;
+	top: 120px;
+    animation: ghost3 15s infinite;		}
+@-moz-keyframes ghost3 { from{left: -400px;} to{left: 1400px;} }
+@-webkit-keyframes ghost3 { from{left: -400px;} to{left: 1400px;} }
+@keyframes ghost3 {from{left: -400px;} to{left: 1400px;} }
+
+div#ghost4	{
+    position: absolute;
+	top: 350px;
+    animation: ghost4 25s infinite;		}
+@-moz-keyframes ghost4 { from{right: -200px;} to{right: 1390px;} }
+@-webkit-keyframes ghost4 { from{right: -200px;} to{right: 1360px;} }
+@keyframes ghost4 {from{right: -200px;} to{right: 1360px;} }
+
+#BackButton {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	height: 68px; 
+	width: 70px;
+	z-index: 2;
+}
+</style>
+<body>
+<center>
+<a href="./../../assignmentsT1_140IOl.html"><img src="./../backbuttonW.png" id="BackButton"></img></a>
+
+<h1 id="title">HALLOWEEN INVITASJON</h1>
+<div id="boks">
+<br>
+<i>Halloween Party skjer hos oss 31. Oktober !</i>
+<br><br>
+Du er invitert til denne festen hvor du kan 
+<br><br>
+ha en heftig tid og feire Halloween !
+</div>
+
+<img src="./pumpkin1.png" id="pumpkin1"></img>
+<img src="./pumpkin2.png" id="pumpkin2"></img>
+<img src="./pumpkin1.png" id="pumpkin3"></img>
+<img src="./pumpkin2.png" id="pumpkin4"></img>
+
+<div id="ghost1"><img src="./ghost1.png" height="60px" width="60px"></div>
+<div id="ghost2"><img src="./ghost2.png" height="55px" width="55px"></div>
+<div id="ghost3"><img src="./ghost3.png" height="200px" width="300px"></div>
+<div id="ghost4"><img src="./highfive.png" height="200px" width="200px"></div>
+
+</center>
+</body>
+</html> 

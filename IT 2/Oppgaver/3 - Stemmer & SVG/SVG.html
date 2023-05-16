@@ -1,0 +1,201 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=1366, initial-scale=1">
+	<title>SVG</title>
+
+<style>
+body {
+	background: linear-gradient(to top, #000066 0%, #ff0066 100%);
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: Verdana, sans-serif;
+}
+#title {
+	position: relative;
+	top: 25px;
+	width: 840px;
+	padding-right: 45px;
+	padding-bottom: 5px;
+	color: white;
+	background-color: black;
+	border: 2px solid white;
+	border-radius: 10px;
+	text-align: center;
+}
+#title1 {
+	position: relative;
+	font-size: 40px;
+	font-style: italic;
+}
+#title2 {
+	position: relative;
+	font-size: 75px;
+	margin-left: 40px;
+}
+.boks {
+	position: relative;
+	height: 350px;
+	width: 805px;
+	padding: 10px 40px;
+	color: white;
+	background-color: black;
+	border: 2px solid white;
+	border-radius: 10px;
+	font-size: 18px;
+	text-align: left;
+	line-height: 1.4;
+}
+#boks1 {
+	top: 57px;
+}
+#boks2 {
+	top: 90px;
+	height: 1370px;
+	margin-bottom: 40px;
+}
+code {
+	font-size: 15px;
+}
+#firkant {
+	position: absolute;
+	top: 820px;
+	right: 310px;
+	height: 300px;
+	z-index: 2;
+}
+#formF {
+	width: 200px;
+	height: 200px;
+	fill: deeppink; 
+	stroke: white; 
+	stroke-width: 5;
+}
+#sirkel {
+	position: absolute;
+	top: 1270px;
+	right: 270px;
+	height: 400px;
+	z-index: 2;
+}
+#formS {
+	fill: darkviolet; 
+	stroke: white; 
+	stroke-width: 5;
+}
+#trekant {
+	position: absolute;
+	top: 1485px;
+	right: 220px;
+	width: 500px;
+	height: 500px;
+	z-index: 2;
+}
+#formT {
+	fill: darkblue; 
+	stroke: white; 
+	stroke-width: 5;
+}
+#BackButton {
+	position: absolute;
+	top: 65px;
+	left: 65px;
+	height: 88px; 
+	width: 90px;
+	z-index: 2;
+}
+</style>
+<body>
+<center>
+<a href="./../../assignmentsT1_140IOl.html"><img src="./../backbuttonB.png" id="BackButton"></img></a>
+
+<div id="title">	
+	<h1 id="title1">
+		<b id="title2">S</b>calable
+		<b id="title2">V</b>ector
+		<b id="title2">G</b>raphics
+	</h1>
+</div>
+	
+<div id="boks1" class="boks">
+<h2>Hva er SVG?</h2>
+Scalable Vector Graphics (SVG) er et XML-basert filformat for markeringsspråk 
+som beskriver todimensjonal vektorgrafikk. Det er en åpen standard utviklet 
+og vedlikeholdt av World Wide Web Consortium.
+<p>
+Siden formatet kan benyttes av XML betyr det at det er et tekstbasert bildeformat og 
+i motsetning til punktgrafikkformater som JPEG og GIF er SVG vektorbasert. 
+<p>
+For å forstå denne koden trenger man ikke sitte inne på altfor mye kunnskaper 
+når det gjelder farger og bilderedigering. Bildet er bygd opp av separate én- og 
+todimensjonale elementer (linjer og flater) som kan endres og manipuleres hver for seg. 
+</div>
+
+<div id="boks2" class="boks">
+<h1>Eksempler på SVG-elementer</h1>
+<h2>Firkant</h2>
+<pre><code>&lt;html>
+&lt;style>
+  #firkant { width: 300px;   height: 300px; }
+
+  #formen_til_firkanten {
+	     width: 200px;   height: 200px;
+	     fill: deeppink;   stroke: white; 
+	     stroke-width:5; }
+&lt;/style>
+&lt;body>
+  &lt;svg id="firkant">
+    &lt;rect x="50" y="20" id="formen_til_firkanten" />
+  &lt;/svg>
+&lt;/body>
+&lt;/html></code></pre>
+
+<br>
+<h2>Sirkel</h2>
+<pre><code>&lt;html>
+&lt;style>
+  #sirkel { width: 400px;   height: 400px; }
+ 
+  #formen_til_sirkelen { fill: darkviolet; 
+       stroke: white;   stroke-width: 5; }
+&lt;/style>
+&lt;body>
+  &lt;svg id="sirkel">
+    &lt;circle cx="110" cy="110" r="100"
+	id="formen_til_sirkelen" />
+  &lt;/svg>
+&lt;/body>
+&lt;/html></code></pre>
+
+<br>
+<h2>Trekant</h2>
+<pre><code>&lt;html>
+&lt;style>
+  #trekant { width: 500px;   height: 300px; }
+ 
+  #formen_til_trekanten { fill: darkblue; 
+       stroke: white;   stroke-width: 5; }
+&lt;/style>
+&lt;body>
+  &lt;svg id="trekant">
+	&lt;polygon points="250,220 150,400 360,400"
+	id="formen_til_trekanten" />
+  &lt;/svg>
+&lt;/body>
+&lt;/html></code></pre>
+</div>
+
+<svg id="firkant">
+	<rect x="50" y="20" id="formF" />
+</svg>
+<svg id="sirkel">
+	<circle cx="110" cy="110" r="100" id="formS" />
+</svg>
+<svg id="trekant">
+	<polygon points="250,220 150,400 360,400" id="formT" />
+</svg>
+
+</center>
+</body>
+</html> 
