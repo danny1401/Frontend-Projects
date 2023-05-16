@@ -1,0 +1,133 @@
+<html>
+<head>
+	<meta charset="UTF-8">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=1366, initial-scale=1">
+	<title>Kalorier i mat</title>
+
+<style>
+body {
+	background-image: url(./blackhole1.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+#boks {
+	position: relative;
+	top: 30px;
+	height: 540px;
+	width: 580px;
+	padding-top: 5px;
+	color: white;
+	background-color: black;
+	border: 4px solid #9900ff;
+	border-radius: 8px;
+	line-height: 2.8;
+}
+#felt { 
+	position: relative;
+	width: 190px;
+	padding: 3px 22px;
+	padding-top: 5px;
+	color: white;
+	background-color: #6b00b3;
+	border: 1px solid white;
+	font-size: 17px;
+	text-align: center;
+	border-radius: 6px;
+	margin: 0 9;
+	outline: none;
+}
+#title {
+	width: 400px;
+	line-height: 1.7;
+	background-color: #6b00b3;
+	border: 2px solid white;
+	border-radius: 8px;
+	font-size: 40px;
+}
+#knapp {
+	position: relative;
+	top: -65px;
+	width: 210px;
+	padding: 13 0;
+	margin: 0 15;
+	color: white;
+	border: 2px solid white;
+	background-color: #6b00b3;
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 1.2;
+	cursor: pointer;
+}
+#title:hover { 	background-color: #9900ff; }
+#knapp:hover { 	background-color: #9900ff; }
+
+#BackButton {
+	position: absolute;
+	top: 70px;
+	left: 70px;
+	height: 68px; 
+	width: 70px;
+	z-index: 2;
+}
+</style>
+<script>
+function eksempel(skjema) {
+
+var produkt = skjema.produkt.value;
+var karbohydrat = skjema.karbohydrat.value;
+var protein = skjema.protein.value;
+var fett = skjema.fett.value;
+var mengde = skjema.mengde.value;
+
+var kaloriK = karbohydrat * 4;
+var kaloriP = protein * 4;
+var kaloriF = fett * 9;
+var sum = kaloriK + kaloriP + kaloriF;
+
+var test1 = produkt;
+var test2 = mengde;
+var test3 = karbohydrat;
+var test4 = protein;
+var test5 = fett;
+var test6 = sum;
+
+document.write ('<object width="100%" height="100%" data="./Kalorier_i_mat.swf?test1='+test1+'&test2='+test2+'&test3='+test3+'&test4='+test4+'&test5='+test5+'&test6='+test6+'"></object>');
+
+}
+</script>
+</head>
+<body>
+<center>
+<a href="./../../assignmentsT2_140IOl.html"><img src="./../backbuttonW.png" id="BackButton"></img></a>
+
+<div id="boks">
+<h1 id="title">Kalorier i mat</h1>
+
+<form name="skjema">
+	<b>Hva heter maten?</b>
+	<input type="text" name="produkt" size="20" id="felt"><p>
+
+	<b>Hvor mye gram veier maten?</b>
+	<input type="number" name="mengde" size="20" id="felt">gram<p>
+
+	<b>Antall gram karbohydrater i maten:</b>
+	<input type="number" name="karbohydrat" size="20" id="felt">gram<p>
+
+	<b>Antall gram proteiner i maten:</b>
+	<input type="number" name="protein" size="20" id="felt">gram<p>
+
+	<b>Antall gram fett i maten:</b>
+	<input type="number" name="fett" size="20" id="felt">gram<p>
+</div>
+
+<input id="knapp" type="button" value="Send inn svar" onClick="eksempel(skjema)">
+<input id="knapp" type="reset" value="Nullstill">
+</form>
+
+</center>
+</body>
+</html>
