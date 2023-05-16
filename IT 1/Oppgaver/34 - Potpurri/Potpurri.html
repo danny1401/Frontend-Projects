@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Potpurri</title>
+<style>
+body {
+	background-image: url(./studio.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;	
+	background-attachment: fixed;
+}
+#title {
+	position: relative;
+	top: 48px;
+	width: 500px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: white;
+	background-color: #202020;
+	border: 2px solid black;	
+	font-size: 38px;
+}
+#boks {
+	position: relative;
+	top: 21px;
+	height: 420px;
+	width: 500px;
+	background-color: white;
+	border: 2px solid black;
+}
+#piano {
+	position: relative;
+	top: 30px;
+	height: 180px;
+	width: 180px;
+	padding: 15px 20px;
+	border: 2px solid black;
+}
+#title1 {
+	position: relative;
+	top: 15px;
+}
+#mix {
+	position: relative;
+	top: 25px;
+	border: 2px solid black;
+	border-radius: 25px;
+}
+#BackButton {
+	position: absolute;
+	top: 30px;
+	left: 40px;
+	border: 0; 
+	height: 69; 
+	width: 72;
+	z-index: 2;
+}
+</style>
+</head>
+<body>
+<center>
+<a href="./../../index.html"><img src="back0.png" id="BackButton"></img></a>
+
+<h1 id="title">Potpurri</h1>
+<div id="boks">
+<img src="./piano.jpg" id="piano"></img>
+<br><br>
+<h2 id="title1">Mix av pianosanger 	&#x1F525;</h2>
+
+<audio id="mix" preload="auto" visibility: hidden;" controls="controls">
+  <source src="./pianomix.ogg" type="audio/ogg">
+  <source src="./pianomix.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+</div>
+
+</center>
+</body>
+</html>
